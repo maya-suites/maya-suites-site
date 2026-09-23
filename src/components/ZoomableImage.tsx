@@ -33,7 +33,7 @@ export function ZoomableImage({ src, alt, width, height, className, sizes }: Pro
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group relative block w-full cursor-zoom-in"
+        className="group relative block w-full cursor-zoom-in [-webkit-tap-highlight-color:transparent] focus:outline-none"
         aria-label="Agrandir l'image"
       >
         <Image src={src} alt={alt} width={width} height={height} sizes={sizes} className={className} />
@@ -50,14 +50,14 @@ export function ZoomableImage({ src, alt, width, height, className, sizes }: Pro
 
       {open && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-indigo/90 p-4 backdrop-blur-sm sm:p-10"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-indigo/90 p-4 backdrop-blur-sm sm:p-10 [-webkit-tap-highlight-color:transparent]"
           onClick={() => setOpen(false)}
         >
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Fermer"
-            className="absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream transition-colors hover:bg-cream/20"
+            className="absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream transition-colors hover:bg-cream/20 [-webkit-tap-highlight-color:transparent]"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
               <path d="M18 6 6 18" />

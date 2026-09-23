@@ -2,8 +2,7 @@ export const SITE = {
   name: "Maya Suites",
   tagline: "A place to belong, anywhere you stay.",
   url: "https://maya-suites.com",
-  // TODO : remplacer par le vrai numéro WhatsApp Business (format international sans +)
-  whatsappNumber: "212600000000",
+  whatsappNumber: "212769019885",
   email: "contact@maya-suites.com", // TODO : confirmer l'adresse email
   city: "Casablanca",
   foundedYear: 2024,

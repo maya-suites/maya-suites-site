@@ -119,27 +119,6 @@ body {
   animation: star-spin 60s linear infinite;
 }
 
-/* ---------- Marquee gallery ---------- */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.marquee-track {
-  animation: marquee var(--marquee-duration, 60s) linear infinite;
-}
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-}
-
 /* ---------- Gold underline flourish ---------- */
 .gold-underline {
   background-image: linear-gradient(#dfa600, #dfa600);

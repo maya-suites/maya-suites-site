@@ -77,7 +77,7 @@ export function OwnerPortal() {
             />
           </BrowserFrame>
           <p className="mt-4 text-center text-xs text-stone">
-            Capture d&apos;écran réelle de l&apos;espace propriétaire — cliquez pour l&apos;agrandir (nom du client modifié pour préserver sa confidentialité).
+            Capture d&apos;écran réelle de l&apos;espace propriétaire (nom du client modifié pour préserver sa confidentialité).
           </p>
         </Reveal>
 

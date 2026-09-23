@@ -3,39 +3,35 @@ import Link from "next/link";
 import { PHOTOS } from "@/lib/photos";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
+import { DraggableMarquee } from "@/components/DraggableMarquee";
 
-function MarqueeRow({ photos, duration }: { photos: typeof PHOTOS; duration: string }) {
+function MarqueeRow({ photos, speed }: { photos: typeof PHOTOS; speed: number }) {
   // Contenu doublé pour une boucle continue
   const doubled = [...photos, ...photos];
   return (
-    <div className="overflow-hidden">
-      <div
-        className="marquee-track flex w-max gap-5"
-        style={{ "--marquee-duration": duration } as React.CSSProperties}
-      >
-        {doubled.map((photo, i) => (
-          <figure
-            key={`${photo.name}-${i}`}
-            className="group relative h-56 w-80 shrink-0 overflow-hidden rounded-2xl sm:h-64 sm:w-96"
-          >
-            <Image
-              src={photo.src}
-              alt={i < photos.length ? photo.alt : ""}
-              aria-hidden={i >= photos.length}
-              fill
-              sizes="384px"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-indigo/80 to-transparent px-5 pt-10 pb-4 text-cream">
-              <span className="font-display text-xl italic">« {photo.name} »</span>
-              <span className="ml-3 text-xs uppercase tracking-[0.2em] text-gold-light">
-                {photo.category}
-              </span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
+    <DraggableMarquee speed={speed}>
+      {doubled.map((photo, i) => (
+        <figure
+          key={`${photo.name}-${i}`}
+          className="group relative h-56 w-80 shrink-0 overflow-hidden rounded-2xl sm:h-64 sm:w-96"
+        >
+          <Image
+            src={photo.src}
+            alt={i < photos.length ? photo.alt : ""}
+            aria-hidden={i >= photos.length}
+            fill
+            sizes="384px"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-indigo/80 to-transparent px-5 pt-10 pb-4 text-cream">
+            <span className="font-display text-xl italic">« {photo.name} »</span>
+            <span className="ml-3 text-xs uppercase tracking-[0.2em] text-gold-light">
+              {photo.category}
+            </span>
+          </figcaption>
+        </figure>
+      ))}
+    </DraggableMarquee>
   );
 }
 
@@ -58,8 +54,8 @@ export function Gallery() {
         />
       </div>
       <div className="mt-14 space-y-5">
-        <MarqueeRow photos={row1} duration="70s" />
-        <MarqueeRow photos={row2} duration="55s" />
+        <MarqueeRow photos={row1} speed={45} />
+        <MarqueeRow photos={row2} speed={58} />
       </div>
       <Reveal className="mt-12 text-center">
         <Link

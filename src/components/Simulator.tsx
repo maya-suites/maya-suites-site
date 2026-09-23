@@ -33,7 +33,7 @@ export function Simulator() {
     bedrooms === 0 ? "studio" : `appartement ${bedrooms} chambre${bedrooms > 1 ? "s" : ""}`
   } (${standingOption?.label.toLowerCase()}${hasView ? ", avec vue/terrasse" : ""}) à ${hoodLabel}. Votre simulateur estime mes revenus entre ${formatMAD(
     estimate.monthlyLow
-  )} et ${formatMAD(estimate.monthlyHigh)} MAD/mois. J'aimerais une estimation précise.`;
+  )} et ${formatMAD(estimate.monthlyHigh)} MAD/mois. Je souhaite vous confier mon bien.`;
 
   const selectCls =
     "w-full rounded-xl border border-indigo/15 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold";
@@ -169,10 +169,10 @@ export function Simulator() {
             className="mt-7 inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-black/20 transition-all duration-300 hover:scale-[1.03]"
           >
             <WhatsAppIcon />
-            Recevoir mon estimation précise
+            Confier mon bien
           </a>
           <p className="mt-3 text-center text-xs text-cream/50">
-            Gratuit, sans engagement — réponse en moins d&apos;une heure
+            Sans engagement — réponse en moins d&apos;une heure
           </p>
         </div>
       </div>

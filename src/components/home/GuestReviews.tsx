@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import { ReviewProof } from "@/components/home/ReviewProof";
+import { DraggableMarquee } from "@/components/DraggableMarquee";
 import { guestReviews, type GuestReview } from "@/lib/reviews";
 
 function Stars() {
@@ -37,21 +38,16 @@ function ReviewCard({ review }: { review: GuestReview }) {
   );
 }
 
-function MarqueeRow({ reviews, duration }: { reviews: GuestReview[]; duration: string }) {
+function MarqueeRow({ reviews, speed }: { reviews: GuestReview[]; speed: number }) {
   const doubled = [...reviews, ...reviews];
   return (
-    <div className="overflow-hidden">
-      <div
-        className="marquee-track flex w-max gap-5"
-        style={{ "--marquee-duration": duration } as React.CSSProperties}
-      >
-        {doubled.map((review, i) => (
-          <div key={`${review.name}-${i}`} aria-hidden={i >= reviews.length}>
-            <ReviewCard review={review} />
-          </div>
-        ))}
-      </div>
-    </div>
+    <DraggableMarquee speed={speed}>
+      {doubled.map((review, i) => (
+        <div key={`${review.name}-${i}`} aria-hidden={i >= reviews.length}>
+          <ReviewCard review={review} />
+        </div>
+      ))}
+    </DraggableMarquee>
   );
 }
 
@@ -77,8 +73,8 @@ export function GuestReviews() {
         />
       </div>
       <div className="mt-14 space-y-5">
-        <MarqueeRow reviews={row1} duration="70s" />
-        <MarqueeRow reviews={row2} duration="60s" />
+        <MarqueeRow reviews={row1} speed={45} />
+        <MarqueeRow reviews={row2} speed={54} />
       </div>
     </section>
   );
