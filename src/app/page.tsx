@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { GuestReviews } from "@/components/home/GuestReviews";
 import { PainSolution } from "@/components/home/PainSolution";
 import { ServicesSection } from "@/components/home/ServicesSection";
+import { OwnerPortal } from "@/components/home/OwnerPortal";
 import { SimulatorSection } from "@/components/home/SimulatorSection";
 import { Gallery } from "@/components/home/Gallery";
 import { Process } from "@/components/home/Process";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <GuestReviews />
       <PainSolution />
       <ServicesSection />
+      <OwnerPortal />
       <SimulatorSection />
       <Gallery />
       <Process />
