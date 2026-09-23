@@ -66,7 +66,7 @@ export function ReviewProof({ src, name, width, height }: Props) {
                 width={width}
                 height={height}
                 quality={100}
-                className="max-h-[80vh] w-auto max-w-full rounded-xl object-contain shadow-2xl"
+                className="h-[75vh] max-h-[720px] w-auto max-w-[90vw] rounded-xl object-contain shadow-2xl"
               />
               <p className="text-xs text-cream/70">Capture d&apos;écran réelle, telle que publiée sur Airbnb.</p>
             </div>
