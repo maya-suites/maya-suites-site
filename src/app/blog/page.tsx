@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { getAllPosts, formatDate } from "@/lib/blog";
 import { PHOTOS } from "@/lib/photos";
 import { StarDiamond } from "@/components/MayaEmblem";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Blog — Conseils location courte durée & Airbnb à Casablanca",
@@ -19,6 +20,17 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Blog", path: "/blog" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Le blog Maya"
         title={

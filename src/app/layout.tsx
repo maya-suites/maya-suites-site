@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { SITE, STATS } from "@/lib/site";
+import { guestReviews } from "@/lib/reviews";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -57,6 +58,9 @@ const jsonLd = {
   description:
     "Conciergerie Airbnb à Casablanca — gestion complète de locations courte durée pour propriétaires.",
   url: SITE.url,
+  telephone: `+${SITE.whatsappNumber}`,
+  email: SITE.email,
+  image: `${SITE.url}/opengraph-image`,
   areaServed: { "@type": "City", name: "Casablanca" },
   address: {
     "@type": "PostalAddress",
@@ -69,6 +73,12 @@ const jsonLd = {
     bestRating: "5",
     reviewCount: "1598",
   },
+  review: guestReviews.slice(0, 4).map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    reviewBody: r.comment,
+  })),
   foundingDate: String(SITE.foundedYear),
   priceRange: `${STATS.commission} de commission`,
   knowsLanguage: ["fr", "en", "ar"],

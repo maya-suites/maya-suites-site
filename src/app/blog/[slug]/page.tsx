@@ -9,6 +9,7 @@ import { StarDiamond } from "@/components/MayaEmblem";
 import { CtaWhatsApp } from "@/components/Buttons";
 import { SITE } from "@/lib/site";
 import { FinalCta } from "@/components/home/FinalCta";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -80,6 +81,18 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Blog", path: "/blog" },
+              { name: post.title, path: `/blog/${post.slug}` },
+            ])
+          ),
+        }}
       />
       <header className="relative overflow-hidden bg-indigo pt-36 pb-24">
         <Lattice color="#dfa600" opacity={0.07} />

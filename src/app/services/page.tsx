@@ -7,6 +7,7 @@ import { SERVICES, ServiceIcon } from "@/lib/services-data";
 import { PHOTOS } from "@/lib/photos";
 import { FinalCta } from "@/components/home/FinalCta";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Gestion Airbnb à Casablanca — Nos services de conciergerie",
@@ -26,6 +27,17 @@ const servicePlaceholders = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Services", path: "/services" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Nos services"
         title={

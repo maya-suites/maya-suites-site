@@ -8,6 +8,7 @@ import { StarDivider } from "@/components/MayaEmblem";
 import { PHOTOS } from "@/lib/photos";
 import { STATS } from "@/lib/site";
 import { FinalCta } from "@/components/home/FinalCta";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "À propos — L'équipe derrière la conciergerie Maya Suites",
@@ -37,6 +38,17 @@ const milestones = [
 export default function AProposPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "À propos", path: "/a-propos" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="À propos"
         title={
@@ -60,6 +72,11 @@ export default function AProposPage() {
             salon, répondons à un voyageur à minuit, ou plions une serviette. Pour vos voyageurs,
             cela crée des séjours inoubliables. Pour vous, propriétaire, cela crée des avis cinq
             étoiles, un calendrier plein et des revenus qui durent.
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed font-medium text-indigo">
+            Avec une note moyenne de {STATS.rating}★ sur {STATS.reviews} avis et plus de{" "}
+            {STATS.apartments} appartements gérés, Maya Suites est la conciergerie Airbnb la mieux
+            notée de Casablanca.
           </p>
         </Reveal>
       </section>

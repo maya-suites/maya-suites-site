@@ -8,6 +8,7 @@ import { CtaWhatsApp } from "@/components/Buttons";
 import { Lattice } from "@/components/Lattice";
 import { STATS } from "@/lib/site";
 import { FinalCta } from "@/components/home/FinalCta";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Prix de notre conciergerie Airbnb à Casablanca — 19 % de commission",
@@ -85,6 +86,17 @@ export default function TarifsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(TARIFS_FAQ)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Tarifs", path: "/tarifs" },
+            ])
+          ),
+        }}
       />
       <PageHero
         eyebrow="Tarifs"

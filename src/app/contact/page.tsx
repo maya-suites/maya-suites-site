@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaWhatsApp, WhatsAppIcon } from "@/components/Buttons";
 import { SITE, whatsappLink } from "@/lib/site";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact — Parlons de votre appartement",
@@ -36,6 +37,17 @@ const cards = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Contact", path: "/contact" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Contact"
         title={

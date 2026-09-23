@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { PHOTOS } from "@/lib/photos";
 import { STATS } from "@/lib/site";
 import { FinalCta } from "@/components/home/FinalCta";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Nos appartements en gestion à Casablanca — 40+ adresses d'exception",
@@ -17,6 +18,17 @@ export const metadata: Metadata = {
 export default function AppartementsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", path: "/" },
+              { name: "Appartements", path: "/appartements" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Nos appartements"
         title={
