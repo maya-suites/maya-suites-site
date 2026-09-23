@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: #dfa600;
+  --color-gold-light: #f0d67d;
+  --color-cream: #fbf7ee;
+  --color-indigo: #1b1560;
+  --color-indigo-soft: #241c74;
+  --color-stone: #8a8478;
+  --color-ink: #211e1a;
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fbf7ee;
+  color: #211e1a;
+  font-family: var(--font-poppins), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #dfa600;
+  color: #1b1560;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Hero entrance ---------- */
+@keyframes hero-up {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-up {
+  animation: hero-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hero-fade {
+  animation: hero-fade 1.6s ease both;
+  animation-delay: var(--d, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-up,
+  .hero-fade {
+    animation: none;
+  }
+}
+
+/* ---------- Slow zoom on hero image ---------- */
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.slow-zoom {
+  animation: slow-zoom 2.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .slow-zoom {
+    animation: none;
+  }
+}
+
+/* ---------- Star spin (subtle, decorative) ---------- */
+@keyframes star-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.star-spin {
+  animation: star-spin 60s linear infinite;
+}
+
+/* ---------- Marquee gallery ---------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ---------- Gold underline flourish ---------- */
+.gold-underline {
+  background-image: linear-gradient(#dfa600, #dfa600);
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.12em;
+}
+
+/* ---------- Prose (blog) ---------- */
+.prose-maya {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #3a362f;
+}
+.prose-maya h2 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1b1560;
+  margin: 2.5rem 0 1rem;
+  line-height: 1.2;
+}
+.prose-maya h3 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b1560;
+  margin: 2rem 0 0.75rem;
+}
+.prose-maya p {
+  margin: 1.1rem 0;
+}
+.prose-maya a {
+  color: #1b1560;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #dfa600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.prose-maya ul,
+.prose-maya ol {
+  margin: 1.1rem 0;
+  padding-left: 1.5rem;
+}
+.prose-maya ul {
+  list-style: disc;
+}
+.prose-maya ol {
+  list-style: decimal;
+}
+.prose-maya li {
+  margin: 0.4rem 0;
+}
+.prose-maya strong {
+  color: #211e1a;
+  font-weight: 600;
+}
+.prose-maya blockquote {
+  border-left: 3px solid #dfa600;
+  padding-left: 1.25rem;
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #1b1560;
+  margin: 1.75rem 0;
+}
+.prose-maya table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.prose-maya th {
+  background: #1b1560;
+  color: #fbf7ee;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  font-weight: 500;
+}
+.prose-maya td {
+  border: 1px solid #e8e0d0;
+  padding: 0.6rem 0.9rem;
+  background: #fff;
 }
