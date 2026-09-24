@@ -10,7 +10,7 @@ export const HOME_FAQ: FaqItem[] = [
   {
     question: "Combien peut rapporter mon appartement en location courte durée à Casablanca ?",
     answer:
-      "Tout dépend du quartier, de la surface et de la qualité du bien. Sur notre parc de plus de 40 appartements (Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne), le taux d'occupation moyen dépasse 85 %. Utilisez notre simulateur en ligne ou contactez-nous sur WhatsApp pour une estimation précise et gratuite.",
+      "Tout dépend du quartier, de la surface et de la qualité du bien. Sur notre parc de plus de 40 appartements (Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC), le taux d'occupation moyen dépasse 85 %. Utilisez notre simulateur en ligne ou contactez-nous sur WhatsApp pour une estimation précise et gratuite.",
   },
   {
     question: "Que comprend la gestion complète de mon bien ?",

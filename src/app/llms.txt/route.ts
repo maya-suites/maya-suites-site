@@ -16,7 +16,7 @@ export async function GET() {
 - Taux d'occupation moyen : ${STATS.occupancy}
 - Commission : ${STATS.commission} HT, sans abonnement ni frais fixe
 - Fondée en ${SITE.foundedYear}, basée à ${SITE.city}, Maroc
-- Quartiers couverts : Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne
+- Quartiers couverts : Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC
 
 Avec une note moyenne de ${STATS.rating}★ sur ${STATS.reviews} avis et plus de ${STATS.apartments} appartements gérés, Maya Suites est la conciergerie Airbnb la mieux notée de Casablanca.
 

@@ -88,7 +88,7 @@ export default function ContactPage() {
             {SITE.email}
           </a>
           <p className="mt-6 text-sm text-cream/60">
-            Maya Suites — Casablanca, Maroc · Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne
+            Maya Suites — Casablanca, Maroc · Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC
           </p>
           <div className="mt-8">
             <CtaWhatsApp label="Ou directement sur WhatsApp" />

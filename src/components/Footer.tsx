@@ -73,7 +73,7 @@ export function Footer() {
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-cream/50">
               Conciergerie Airbnb Casablanca · Gestion locative courte durée · Gauthier, Racine,
-              Maârif, Aïn Diab, Marina, Bourgogne
+              Maârif, Aïn Diab, Marina, Bourgogne, CFC
             </p>
           </div>
         </div>

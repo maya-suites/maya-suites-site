@@ -48,6 +48,11 @@ export const NEIGHBORHOODS = [
     name: "Bourgogne",
     desc: "Entre centre-ville et océan, un quartier qui monte pour l'investissement locatif.",
   },
+  {
+    slug: "cfc",
+    name: "CFC",
+    desc: "Le quartier d'affaires nouvelle génération — tours modernes et clientèle business haut de gamme.",
+  },
 ] as const;
 
 export const NAV_LINKS = [

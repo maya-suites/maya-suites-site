@@ -1,6 +1,6 @@
 ---
 title: "Les meilleurs quartiers pour un Airbnb à Casablanca (guide 2026)"
-description: "Gauthier, Racine, Aïn Diab, Maârif, Marina, Bourgogne : analyse quartier par quartier pour investir ou louer en courte durée à Casablanca."
+description: "Gauthier, Racine, Aïn Diab, Maârif, Marina, Bourgogne, CFC : analyse quartier par quartier pour investir ou louer en courte durée à Casablanca."
 date: "2026-08-28"
 category: "Investissement"
 cover: 10
@@ -58,6 +58,14 @@ Entre le centre-ville et l'océan, Bourgogne profite de sa position et de prix d
 - **Point fort** : un potentiel de progression des tarifs dans les prochaines années
 - **À savoir** : la qualité de l'immeuble varie beaucoup d'une rue à l'autre
 
+## CFC : le quartier d'affaires nouvelle génération
+
+Casablanca Finance City rassemble tours modernes, sièges de multinationales et institutions financières. C'est le point de chute naturel des **voyageurs d'affaires internationaux**, avec des séjours souvent courts mais réservés à des tarifs élevés.
+
+- **Profil de bien idéal** : appartement récent et haut standing, proche des tours et bien connecté
+- **Point fort** : une clientèle business qui recherche avant tout le confort et la fiabilité, peu sensible au prix
+- **À savoir** : la demande week-end est plus faible qu'en semaine — un bon complément à un quartier plus loisir dans un portefeuille diversifié
+
 ## Le vrai facteur de rentabilité n'est pas (que) le quartier
 
 Voici ce que deux ans de gestion nous ont appris : **à quartier égal, deux appartements identiques peuvent avoir 40 % d'écart de revenus**. La différence ? La décoration, les photos, la tarification, la vitesse de réponse aux voyageurs et la note de l'annonce. Notre [guide de la rentabilité Airbnb à Casablanca](/blog/rentabilite-airbnb-casablanca) détaille chacun de ces leviers.
@@ -66,4 +74,4 @@ Le quartier fixe le plafond ; la gestion détermine à quelle distance du plafon
 
 ## Estimez votre bien, quartier par quartier
 
-Notre [simulateur de revenus](/tarifs#simulateur) intègre les différences de tarifs entre Gauthier, Racine, Maârif, Aïn Diab, Marina et Bourgogne. Quelques réglages suffisent pour obtenir une première estimation — et pour une analyse précise de votre appartement, [contactez-nous sur WhatsApp](/contact) : c'est gratuit et sans engagement.
+Notre [simulateur de revenus](/tarifs#simulateur) intègre les différences de tarifs entre Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne et CFC. Quelques réglages suffisent pour obtenir une première estimation — et pour une analyse précise de votre appartement, [contactez-nous sur WhatsApp](/contact) : c'est gratuit et sans engagement.

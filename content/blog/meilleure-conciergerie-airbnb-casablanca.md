@@ -38,7 +38,7 @@ Un taux d'occupation supérieur de 30 points de pourcentage à la moyenne du mar
 
 ## Ce qui, concrètement, fait la différence chez Maya Suites
 
-- Un parc concentré sur **Casablanca uniquement** — Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne — avec une connaissance fine des tarifs et de la demande de chaque quartier ([guide des quartiers](/blog/meilleurs-quartiers-airbnb-casablanca)).
+- Un parc concentré sur **Casablanca uniquement** — Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC — avec une connaissance fine des tarifs et de la demande de chaque quartier ([guide des quartiers](/blog/meilleurs-quartiers-airbnb-casablanca)).
 - Une tarification ajustée en continu, jamais un tarif fixe laissé à l'abandon.
 - Un standard de ménage et de linge hôtelier appliqué systématiquement, détaillé dans notre [guide qualité](/blog/menage-linge-standards-hoteliers-airbnb).
 - Un espace propriétaire transparent, avec revenus et statistiques accessibles à tout moment.
