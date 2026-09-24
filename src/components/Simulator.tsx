@@ -29,8 +29,8 @@ export function Simulator() {
     ESTIMATOR_NEIGHBORHOODS.find((n) => n.id === neighborhoodId)?.label ?? "";
   const standingOption = STANDING_OPTIONS.find((s) => s.id === standing);
 
-  const waMessage = `Bonjour Maya Suites ! J'ai un ${
-    bedrooms === 0 ? "studio" : `appartement ${bedrooms} chambre${bedrooms > 1 ? "s" : ""}`
+  const waMessage = `Bonjour Maya Suites ! J'ai un appartement ${bedrooms} chambre${
+    bedrooms > 1 ? "s" : ""
   } (${standingOption?.label.toLowerCase()}${hasView ? ", avec vue/terrasse" : ""}) à ${hoodLabel}. Votre simulateur estime mes revenus entre ${formatMAD(
     estimate.monthlyLow
   )} et ${formatMAD(estimate.monthlyHigh)} MAD/mois. Je souhaite vous confier mon bien.`;
@@ -111,7 +111,7 @@ export function Simulator() {
                 Chambres
               </span>
               <div className="flex gap-2">
-                {[0, 1, 2, 3, 4].map((b) => (
+                {[1, 2, 3, 4].map((b) => (
                   <button
                     key={b}
                     type="button"
@@ -125,7 +125,7 @@ export function Simulator() {
                         : "border-indigo/15 bg-white text-stone hover:border-gold/50"
                     }`}
                   >
-                    {b === 0 ? "Studio" : b}
+                    {b}
                   </button>
                 ))}
               </div>

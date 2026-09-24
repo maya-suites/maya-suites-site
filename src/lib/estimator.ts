@@ -5,11 +5,11 @@
 export const ESTIMATOR_NEIGHBORHOODS = [
   { id: "gauthier", label: "Gauthier", baseAdr: 420 },
   { id: "racine", label: "Racine", baseAdr: 400 },
-  { id: "maarif", label: "Maârif", baseAdr: 360 },
-  { id: "ain-diab", label: "Aïn Diab", baseAdr: 510 },
-  { id: "marina", label: "Marina", baseAdr: 480 },
-  { id: "bourgogne", label: "Bourgogne", baseAdr: 340 },
-  { id: "cfc", label: "CFC", baseAdr: 430 },
+  { id: "maarif", label: "Maârif", baseAdr: 370 },
+  { id: "ain-diab", label: "Aïn Diab", baseAdr: 460 },
+  { id: "marina", label: "Marina", baseAdr: 490 },
+  { id: "bourgogne", label: "Bourgogne", baseAdr: 410 },
+  { id: "cfc", label: "CFC", baseAdr: 450 },
 ] as const;
 
 export const STANDING_OPTIONS = [
