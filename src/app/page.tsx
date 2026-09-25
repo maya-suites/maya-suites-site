@@ -16,9 +16,9 @@ import { HomeFaq } from "@/components/home/HomeFaq";
 import { FinalCta } from "@/components/home/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Conciergerie Airbnb à Casablanca — Gestion complète de votre bien | Maya Suites",
+  title: "Maya Suites - Votre conciergerie Airbnb de confiance à Casablanca",
   description:
-    "Maya Suites, conciergerie Airbnb à Casablanca : gestion Airbnb complète, 40+ appartements, 4,83★ sur 1 598 avis, 85 % d'occupation. Estimez gratuitement les revenus de votre bien.",
+    "Conciergerie Airbnb de confiance à Casablanca : 4,83★, 40+ biens gérés, 0 frais si vous ne gagnez pas. Estimez vos revenus gratuitement.",
   alternates: { canonical: "/" },
 };
 

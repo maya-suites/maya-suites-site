@@ -41,23 +41,19 @@ export function Hero() {
             </p>
           </div>
 
-          <h1 className="mt-6">
-            <span
-              className="hero-up block font-display text-5xl leading-[1.05] font-semibold text-cream sm:text-6xl lg:text-7xl"
-              style={{ "--d": "250ms" } as React.CSSProperties}
-            >
-              Votre appartement mérite mieux que d&apos;être{" "}
-              <em className="text-gold not-italic font-display italic">vide</em>.
-            </span>
-            <span
-              className="hero-up mt-5 block text-base font-normal leading-relaxed text-cream/85 sm:text-lg"
-              style={{ "--d": "400ms" } as React.CSSProperties}
-            >
-              Maya Suites est la conciergerie Airbnb de référence à Casablanca. Nous prenons soin
-              de votre bien, de vos voyageurs et de vos revenus — vous, vous ne vous occupez de
-              rien.
-            </span>
+          <h1
+            className="hero-up mt-6 block font-display text-5xl leading-[1.05] font-semibold text-cream sm:text-6xl lg:text-7xl"
+            style={{ "--d": "250ms" } as React.CSSProperties}
+          >
+            Votre conciergerie Airbnb de confiance à Casablanca
           </h1>
+          <p
+            className="hero-up mt-5 block text-base font-normal leading-relaxed text-cream/85 sm:text-lg"
+            style={{ "--d": "400ms" } as React.CSSProperties}
+          >
+            Maya Suites est la conciergerie Airbnb de référence à Casablanca. Nous prenons soin de
+            votre bien, de vos voyageurs et de vos revenus — vous, vous ne vous occupez de rien.
+          </p>
 
           <div
             className="hero-up mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
