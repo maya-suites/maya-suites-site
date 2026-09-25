@@ -35,3 +35,33 @@ export const guestReviews: GuestReview[] = [
   { name: "Nicolas", stay: "2 nuits", comment: "Appartement pratique avec parking privé souterrain et gardien 24h/24. Quartier calme. Petit supermarché à côté pour que vous puissiez acheter ce qu'il vous faut pour votre petit déjeuner. Maya est gentille et réactive. Je le recommande pour un petit séjour à Casablanca.", image: "/avis-airbnb/avis-21.png", imageWidth: 360, imageHeight: 582 },
   { name: "Eline", stay: "1 nuit", comment: "Superbe appartement décoré avec beaucoup de goût ! La localisation est top, tout s'est déroulé très bien et j'ai eu une super expérience tout le long. Je recommande vivement !", image: "/avis-airbnb/avis-22.png", imageWidth: 358, imageHeight: 504 },
 ];
+
+export type OwnerTestimonial = {
+  quote: string;
+  author: string;
+  detail: string;
+};
+
+/**
+ * Avis propriétaires réels, retranscrits depuis la fiche Google Maps de Maya Suites.
+ */
+export const ownerTestimonials: OwnerTestimonial[] = [
+  {
+    quote:
+      "J'ai confié mon appartement à l'équipe Maya Suites, l'appartement a toujours été nickel, des garçons sérieux et minutieux. Merci",
+    author: "Mohamed",
+    detail: "Propriétaire à Aïn Diab",
+  },
+  {
+    quote:
+      "Une équipe professionnelle qui fait bien son travail je suis très satisfaite je leur souhaite beaucoup de succès merci maya suites",
+    author: "Karima",
+    detail: "Propriétaire à Aïn Diab",
+  },
+  {
+    quote:
+      "Cela fait plusieurs années maintenant que je confie mes appartements à Maya Suites et je suis vraiment ravie de cette collaboration. Au fil du temps, une vraie relation de confiance s'est installée. Je sais que je peux compter sur eux, qu'ils sont réactifs et que mes appartements sont entre de bonnes mains. Merci à toute l'équipe !",
+    author: "Véronique",
+    detail: "Propriétaire à Maârif",
+  },
+];

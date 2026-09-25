@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { SITE, STATS } from "@/lib/site";
-import { guestReviews } from "@/lib/reviews";
+import { guestReviews, ownerTestimonials } from "@/lib/reviews";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -73,12 +73,20 @@ const jsonLd = {
     bestRating: "5",
     reviewCount: "1598",
   },
-  review: guestReviews.slice(0, 4).map((r) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: r.name },
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    reviewBody: r.comment,
-  })),
+  review: [
+    ...guestReviews.slice(0, 4).map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: r.comment,
+    })),
+    ...ownerTestimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.author },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: t.quote,
+    })),
+  ],
   foundingDate: String(SITE.foundedYear),
   priceRange: `${STATS.commission} de commission`,
   knowsLanguage: ["fr", "en", "ar"],
