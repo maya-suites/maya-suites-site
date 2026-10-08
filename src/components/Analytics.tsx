@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 type UmamiTrack = (event: string, data?: Record<string, string>) => void;
 
-const WEBSITE_ID = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
+const WEBSITE_ID = "3553c869-d621-4998-8876-9967be1ebc9c";
 
 export function Analytics() {
   useEffect(() => {
@@ -18,8 +18,6 @@ export function Analytics() {
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
   }, []);
-
-  if (!WEBSITE_ID) return null;
 
   return (
     <Script
