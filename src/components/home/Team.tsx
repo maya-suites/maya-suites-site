@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import tatianaMenage from "@/images/tatiana-menage.jpg";
 
 export function Team() {
   return (
@@ -21,10 +23,19 @@ export function Team() {
             className="aspect-[4/5]"
             label="L'équipe accueillant des voyageurs à la porte d'un appartement — sourires, remise de clés"
           />
-          <MediaPlaceholder
-            className="aspect-[4/5]"
-            label="L'équipe ménage en action — préparation d'un lit avec linge hôtelier blanc"
-          />
+          <figure className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+            <Image
+              src={tatianaMenage}
+              alt="Tatiana, de l'équipe ménage Maya Suites, arrange les coussins d'un canapé dans un appartement à Casablanca"
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-indigo/85 to-transparent px-6 pt-12 pb-5 text-cream">
+              <span className="font-display text-2xl italic">Tatiana</span>
+              <span className="ml-3 text-[11px] uppercase tracking-[0.2em] text-gold-light">Équipe ménage</span>
+            </figcaption>
+          </figure>
           <MediaPlaceholder
             className="aspect-[4/5]"
             label="Portrait des fondateurs / de l'équipe au complet dans un des appartements"
