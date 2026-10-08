@@ -16,7 +16,7 @@ type Props = {
  */
 export function DraggableMarquee({ children, speed = 45 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const drag = useRef({ down: false, startX: 0, startScroll: 0 });
+  const drag = useRef({ down: false, startX: 0, startScroll: 0, captured: false });
   const paused = useRef(false);
 
   useEffect(() => {
@@ -59,14 +59,18 @@ export function DraggableMarquee({ children, speed = 45 }: Props) {
   const onPointerDown = (e: React.PointerEvent) => {
     const el = containerRef.current;
     if (!el) return;
-    drag.current = { down: true, startX: e.clientX, startScroll: el.scrollLeft };
-    el.setPointerCapture(e.pointerId);
+    drag.current = { down: true, startX: e.clientX, startScroll: el.scrollLeft, captured: false };
   };
 
   const onPointerMove = (e: React.PointerEvent) => {
     const el = containerRef.current;
     if (!el || !drag.current.down) return;
     const dx = e.clientX - drag.current.startX;
+    if (!drag.current.captured) {
+      if (Math.abs(dx) < 6) return;
+      drag.current.captured = true;
+      el.setPointerCapture(e.pointerId);
+    }
     el.scrollLeft = wrap(drag.current.startScroll - dx);
   };
 
