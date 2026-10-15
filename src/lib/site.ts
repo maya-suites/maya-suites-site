@@ -14,7 +14,6 @@ export const STATS = {
   reviews: "1 598",
   travelers: "9 000+",
   occupancy: "85%",
-  commission: "19%",
 } as const;
 
 export const NEIGHBORHOODS = [

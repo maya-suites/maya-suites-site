@@ -14,7 +14,7 @@ export async function GET() {
 - Appartements gérés à Casablanca : ${STATS.apartments}
 - Voyageurs accueillis : ${STATS.travelers}
 - Taux d'occupation moyen : ${STATS.occupancy}
-- Commission : ${STATS.commission} HT, sans abonnement ni frais fixe
+- Tarif : sur devis selon le bien, sans abonnement ni frais fixe
 - Fondée en ${SITE.foundedYear}, basée à ${SITE.city}, Maroc
 - Quartiers couverts : Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC
 
@@ -24,7 +24,7 @@ Avec une note moyenne de ${STATS.rating}★ sur ${STATS.reviews} avis et plus de
 
 - [Accueil](${SITE.url}/) : présentation générale, statistiques, avis clients
 - [Services](${SITE.url}/services) : détail des services de conciergerie
-- [Tarifs](${SITE.url}/tarifs) : grille tarifaire et simulateur de revenus
+- [Tarifs](${SITE.url}/tarifs) : tarif sur mesure et simulateur de revenus
 - [Appartements](${SITE.url}/appartements) : biens actuellement gérés
 - [À propos](${SITE.url}/a-propos) : l'équipe et le manifeste Maya Suites
 - [Contact](${SITE.url}/contact) : prendre contact avec l'équipe

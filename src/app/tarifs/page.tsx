@@ -6,14 +6,13 @@ import { Faq, faqJsonLd, type FaqItem } from "@/components/Faq";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CtaWhatsApp } from "@/components/Buttons";
 import { Lattice } from "@/components/Lattice";
-import { STATS } from "@/lib/site";
 import { FinalCta } from "@/components/home/FinalCta";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Prix de notre conciergerie Airbnb à Casablanca — 19 % de commission",
+  title: "Tarifs de notre conciergerie Airbnb à Casablanca — Devis sur mesure",
   description:
-    "Prix conciergerie Airbnb Casablanca : 19 % HT de commission sur les revenus, zéro frais fixe, zéro abonnement. Tout est inclus. Simulez gratuitement les revenus de votre appartement.",
+    "Tarifs conciergerie Airbnb Casablanca : une rémunération liée à vos résultats, zéro frais fixe, zéro abonnement, tout inclus. Contactez-nous pour votre tarif personnalisé.",
   alternates: { canonical: "/tarifs" },
 };
 
@@ -56,7 +55,7 @@ const TARIFS_FAQ: FaqItem[] = [
   {
     question: "Quel est le prix de la conciergerie Maya Suites à Casablanca ?",
     answer:
-      "Notre commission est de 19 % HT des revenus de location générés. Les frais de ménage sont facturés aux voyageurs lors de leur réservation. Il n'y a aucun abonnement, aucun frais d'entrée et aucun coût fixe pour le propriétaire.",
+      "Notre tarif est personnalisé selon votre bien et vos objectifs. Contactez-nous sur WhatsApp : nous vous répondons en moins d'une heure avec une proposition claire. Les frais de ménage sont facturés aux voyageurs lors de leur réservation. Il n'y a aucun abonnement, aucun frais d'entrée et aucun coût fixe pour le propriétaire.",
   },
   {
     question: "Y a-t-il des frais cachés ou des coûts de démarrage ?",
@@ -64,19 +63,19 @@ const TARIFS_FAQ: FaqItem[] = [
       "Non. Le shooting photo, la création des annonces et la mise en ligne sont inclus. Les seuls investissements éventuels concernent l'équipement de votre appartement (linge, équipements manquants) — toujours validés avec vous avant.",
   },
   {
-    question: "Pourquoi une commission plutôt qu'un forfait fixe ?",
+    question: "Pourquoi une rémunération liée à mes revenus plutôt qu'un forfait fixe ?",
     answer:
       "Parce que c'est le seul modèle qui aligne nos intérêts : nous ne gagnons que si vous gagnez. Chaque nuitée optimisée, chaque avis cinq étoiles et chaque voyageur fidélisé augmente vos revenus — et les nôtres.",
   },
   {
-    question: "La commission de 19 % est-elle négociable pour plusieurs biens ?",
+    question: "Le tarif est-il adapté si je confie plusieurs biens ?",
     answer:
       "Si vous nous confiez plusieurs appartements, parlons-en. Nous étudions des conditions adaptées aux portefeuilles de biens.",
   },
   {
-    question: "Comment se compare ce tarif au marché de la conciergerie à Casablanca ?",
+    question: "Comment obtenir mon tarif ?",
     answer:
-      "Les conciergeries Airbnb pratiquent généralement entre 15 % et 30 % de commission. À 19 % HT tout inclus — shooting, tarification dynamique, communication 24/7 et reporting mensuel — Maya Suites se situe dans le cœur du marché avec un niveau de service hôtelier.",
+      "Envoyez-nous un message WhatsApp avec le quartier, le nombre de chambres et le standing de votre bien. Nous revenons vers vous en moins d'une heure avec une proposition personnalisée, tout inclus : shooting, tarification dynamique, communication 24/7 et reporting mensuel.",
   },
 ];
 
@@ -102,33 +101,35 @@ export default function TarifsPage() {
         eyebrow="Tarifs"
         title={
           <>
-            Un prix simple, <em className="italic text-gold">tout inclus</em>
+            Un tarif <em className="italic text-gold">sur mesure</em>, tout inclus
           </>
         }
-        description="19 % HT de commission sur les revenus générés. Pas d'abonnement, pas de frais cachés : si votre appartement ne rapporte pas, nous ne gagnons rien."
+        description="Pas d'abonnement, pas de frais cachés : si votre appartement ne rapporte pas, nous ne gagnons rien. Contactez-nous pour connaître le tarif adapté à votre bien."
       />
 
-      {/* Le chiffre */}
+      {/* Demande de tarif */}
       <section className="relative overflow-hidden bg-gold py-16">
         <Lattice color="#1b1560" opacity={0.05} />
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-5 text-center sm:px-8 lg:flex-row lg:justify-between lg:text-left">
           <Reveal>
-            <p className="font-display text-8xl font-bold text-indigo sm:text-9xl">
-              {STATS.commission}
-              <span className="ml-3 align-middle font-sans text-xl font-semibold text-indigo/70">
-                HT
-              </span>
+            <p className="font-display text-5xl font-bold text-indigo sm:text-7xl">
+              Votre tarif, <em className="italic">sur mesure</em>
             </p>
-            <p className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-indigo/70">
-              de commission sur les revenus générés
+            <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-indigo/70">
+              selon votre bien et vos objectifs
             </p>
           </Reveal>
           <Reveal delay={150} className="max-w-md">
             <p className="text-indigo/90">
-              + frais de ménage facturés aux voyageurs à chaque réservation.{" "}
-              <strong>C&apos;est tout.</strong> Vous percevez le reste, chaque mois, avec un
-              reporting détaillé.
+              Frais de ménage facturés aux voyageurs, aucun coût fixe pour vous.{" "}
+              <strong>Écrivez-nous : réponse en moins d&apos;une heure.</strong>
             </p>
+            <div className="mt-5 flex justify-center lg:justify-start">
+              <CtaWhatsApp
+                label="Demander mon tarif"
+                message="Bonjour Maya Suites ! Je souhaite connaître vos tarifs pour mon appartement."
+              />
+            </div>
           </Reveal>
         </div>
       </section>
@@ -136,7 +137,7 @@ export default function TarifsPage() {
       {/* Tout inclus */}
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         <SectionHeading
-          eyebrow="Ce que couvre la commission"
+          eyebrow="Ce qui est inclus"
           title={
             <>
               Tout est <em className="italic text-gold">vraiment</em> inclus

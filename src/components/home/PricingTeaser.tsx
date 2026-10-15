@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Lattice } from "@/components/Lattice";
-import { STATS } from "@/lib/site";
+import { CtaWhatsApp } from "@/components/Buttons";
 
 const included = [
   "Annonces & tarification dynamique",
@@ -20,37 +20,32 @@ export function PricingTeaser() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Tarif transparent
+              Tarif sur mesure
             </p>
             <h2 className="mt-3 font-display text-4xl leading-[1.1] font-semibold text-cream sm:text-5xl">
               Vous ne payez que{" "}
               <em className="italic text-gold">lorsque vous gagnez</em>
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/75">
-              Pas d&apos;abonnement, pas de frais cachés, pas de surprise. Notre rémunération est
-              une commission sur vos revenus : si votre appartement ne rapporte pas, nous non
-              plus. Voilà pourquoi nous nous battons pour chaque nuitée.
+              Pas d&apos;abonnement, pas de frais cachés, pas de surprise. Notre rémunération
+              dépend de vos revenus : si votre appartement ne rapporte pas, nous non plus. Voilà pourquoi nous nous battons pour chaque nuitée.
             </p>
             <Link
               href="/tarifs"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-indigo shadow-lg shadow-gold/20 transition-all duration-300 hover:scale-[1.03] hover:bg-gold-light"
             >
-              Voir le détail des tarifs →
+              Découvrir nos tarifs →
             </Link>
           </Reveal>
 
           <Reveal delay={150}>
             <div className="rounded-3xl border border-gold/30 bg-indigo-soft/60 p-8 backdrop-blur sm:p-10">
-              <div className="flex items-end gap-3">
-                <p className="font-display text-8xl leading-none font-bold text-gold">
-                  {STATS.commission}
-                </p>
-                <p className="pb-2 text-sm leading-snug text-cream/80">
-                  HT de commission
-                  <br />
-                  sur les revenus générés*
-                </p>
-              </div>
+              <p className="font-display text-5xl leading-tight font-bold text-gold sm:text-6xl">
+                Votre tarif, <em className="italic">sur mesure</em>
+              </p>
+              <p className="mt-3 text-sm leading-snug text-cream/80">
+                Contactez-nous : réponse en moins d&apos;une heure.
+              </p>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {included.map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-cream/85">
@@ -61,8 +56,14 @@ export function PricingTeaser() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-8">
+                <CtaWhatsApp
+                  label="Demander mon tarif"
+                  message="Bonjour Maya Suites ! Je souhaite connaître vos tarifs pour mon appartement."
+                />
+              </div>
               <p className="mt-6 text-xs text-cream/50">
-                * Frais de ménage facturés aux voyageurs. Aucun coût fixe pour vous.
+                Frais de ménage facturés aux voyageurs. Aucun coût fixe pour vous.
               </p>
             </div>
           </Reveal>

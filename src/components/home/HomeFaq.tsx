@@ -5,7 +5,7 @@ export const HOME_FAQ: FaqItem[] = [
   {
     question: "Combien coûte une conciergerie Airbnb à Casablanca ?",
     answer:
-      "Chez Maya Suites, le tarif est simple : 19 % HT de commission sur les revenus générés, plus les frais de ménage facturés aux voyageurs. Aucun abonnement, aucun frais fixe : si votre appartement ne rapporte pas, nous ne gagnons rien. Ce modèle aligne nos intérêts avec les vôtres.",
+      "Chez Maya Suites, le tarif est personnalisé selon votre bien et vos objectifs. Aucun abonnement, aucun frais fixe : notre rémunération dépend de vos revenus, donc si votre appartement ne rapporte pas, nous ne gagnons rien. Les frais de ménage sont facturés aux voyageurs. Contactez-nous sur WhatsApp pour obtenir votre tarif en moins d'une heure.",
   },
   {
     question: "Combien peut rapporter mon appartement en location courte durée à Casablanca ?",

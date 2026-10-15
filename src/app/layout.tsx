@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Analytics } from "@/components/Analytics";
-import { SITE, STATS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { guestReviews, ownerTestimonials } from "@/lib/reviews";
 
 const cormorant = Cormorant_Garamond({
@@ -89,7 +89,6 @@ const jsonLd = {
     })),
   ],
   foundingDate: String(SITE.foundedYear),
-  priceRange: `${STATS.commission} de commission`,
   knowsLanguage: ["fr", "en", "ar"],
 };
 

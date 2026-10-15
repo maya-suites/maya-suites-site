@@ -28,7 +28,7 @@ Comme détaillé dans notre [guide pour choisir sa conciergerie Airbnb](/blog/ch
 | Note moyenne | **4,83★** sur 1 598 avis | Variable, souvent en dessous de 4,5★ |
 | Appartements gérés à Casablanca | **40+** | — |
 | Voyageurs accueillis | **9 000+** | — |
-| Commission | 19 % HT, sans abonnement ni frais fixe | Variable selon les prestataires |
+| Tarif | Sur devis, sans abonnement ni frais fixe | Variable selon les prestataires |
 
 Ces chiffres sont publics et vérifiables : les avis cinq étoiles affichés sur notre page d'accueil sont des captures d'écran authentiques de nos annonces Airbnb, pas des témoignages rédigés en interne.
 
