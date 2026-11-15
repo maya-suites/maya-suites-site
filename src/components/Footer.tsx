@@ -22,7 +22,10 @@ export function Footer() {
               {SITE.tagline}
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/70">
-              Conciergerie Airbnb à Casablanca. Nous gérons votre appartement comme s&apos;il était le
+              <Link href="/" className="underline decoration-gold/60 underline-offset-4 hover:text-gold-light">
+                Conciergerie Airbnb à Casablanca
+              </Link>
+              . Nous gérons votre appartement comme s&apos;il était le
               nôtre — et vos voyageurs comme s&apos;ils étaient chez eux.
             </p>
           </div>

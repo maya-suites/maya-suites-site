@@ -144,6 +144,11 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
           <div className="mt-6">
             <CtaWhatsApp label="Échanger sur WhatsApp" />
           </div>
+          <p className="mt-6 text-sm text-stone">
+            <Link href="/" className="font-semibold text-indigo underline decoration-gold decoration-2 underline-offset-4 hover:text-gold">
+              Maya Suites, conciergerie Airbnb à Casablanca
+            </Link>
+          </p>
         </div>
 
         {relatedPosts.length > 0 && (
