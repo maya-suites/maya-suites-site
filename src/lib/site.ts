@@ -5,6 +5,7 @@ export const SITE = {
   whatsappNumber: "212769019885",
   email: "contact@maya-suites.com", // TODO : confirmer l'adresse email
   city: "Casablanca",
+  googleProfile: "https://share.google/JIrqdCGhruokKjqwx",
   foundedYear: 2024,
 } as const;
 

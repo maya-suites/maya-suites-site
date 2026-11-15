@@ -47,7 +47,8 @@ export function HomeFaq() {
           eyebrow="Questions fréquentes"
           title={
             <>
-              Tout ce que les propriétaires <em className="italic text-gold">nous demandent</em>
+              Conciergerie Airbnb à Casablanca : ce que les propriétaires{" "}
+              <em className="italic text-gold">nous demandent</em>
             </>
           }
         />

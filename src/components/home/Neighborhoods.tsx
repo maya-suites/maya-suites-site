@@ -11,11 +11,11 @@ export function Neighborhoods() {
           eyebrow="Casablanca, notre terrain de jeu"
           title={
             <>
-              Les quartiers que nous connaissons{" "}
+              Les quartiers de Casablanca que nous connaissons{" "}
               <em className="italic text-gold">par cœur</em>
             </>
           }
-          description="Notre conciergerie gère des appartements dans les quartiers les plus demandés de Casablanca. Nous savons ce que cherchent les voyageurs, rue par rue — et ce que peut rapporter votre bien, immeuble par immeuble."
+          description="Notre conciergerie Airbnb gère des appartements dans les quartiers les plus demandés de Casablanca. Nous savons ce que cherchent les voyageurs, rue par rue — et ce que peut rapporter votre bien, immeuble par immeuble."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

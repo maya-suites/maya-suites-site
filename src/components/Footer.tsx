@@ -73,6 +73,16 @@ export function Footer() {
                 </a>
               </li>
               <li>Casablanca, Maroc</li>
+              <li>
+                <a
+                  href={SITE.googleProfile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-gold-light"
+                >
+                  Notre fiche Google
+                </a>
+              </li>
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-cream/50">
               Conciergerie Airbnb Casablanca · Gestion locative courte durée · Gauthier, Racine,

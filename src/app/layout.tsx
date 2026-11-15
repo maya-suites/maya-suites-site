@@ -56,9 +56,12 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "@id": `${SITE.url}/#organisation`,
   name: SITE.name,
+  alternateName: "Maya Suites - Conciergerie Airbnb à Casablanca",
   description:
     "Conciergerie Airbnb à Casablanca — gestion complète de locations courte durée pour propriétaires.",
   url: SITE.url,
+  sameAs: [SITE.googleProfile],
+  hasMap: SITE.googleProfile,
   telephone: `+${SITE.whatsappNumber}`,
   email: SITE.email,
   image: `${SITE.url}/opengraph-image`,

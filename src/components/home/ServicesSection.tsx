@@ -12,10 +12,10 @@ export function ServicesSection() {
             eyebrow="Nos services"
             title={
               <>
-                Une gestion Airbnb <em className="italic text-gold">de bout en bout</em>
+                Conciergerie Airbnb à Casablanca : <em className="italic text-gold">de bout en bout</em>
           </>
             }
-            description="De la première photo de votre annonce au dernier regard du ménage avant une arrivée : nous nous occupons de tout, avec le niveau d'exigence d'un hôtel."
+            description="De la première photo de votre annonce au dernier regard du ménage avant une arrivée : notre conciergerie Airbnb s'occupe de tout, avec le niveau d'exigence d'un hôtel."
           />
           <Reveal delay={150}>
             <Link
