@@ -72,7 +72,9 @@ export function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              <li>Casablanca, Maroc</li>
+              <li>
+                {SITE.streetAddress}, {SITE.postalCode} Casablanca, Maroc
+              </li>
               <li>
                 <a
                   href={SITE.googleProfile}

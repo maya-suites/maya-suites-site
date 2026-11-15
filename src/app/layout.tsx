@@ -68,6 +68,8 @@ const jsonLd = {
   areaServed: { "@type": "City", name: "Casablanca" },
   address: {
     "@type": "PostalAddress",
+    streetAddress: SITE.streetAddress,
+    postalCode: SITE.postalCode,
     addressLocality: "Casablanca",
     addressCountry: "MA",
   },
