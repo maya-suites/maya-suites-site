@@ -43,6 +43,7 @@ export function OwnerSpace() {
           </div>
           <figcaption className="mt-2.5 font-mono text-xs leading-normal text-muted">
             Capture réelle de l&apos;espace propriétaire, vue d&apos;ensemble (nom du client modifié).
+            La commission affichée inclut les frais de ménage.
           </figcaption>
         </figure>
       </div>

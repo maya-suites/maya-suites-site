@@ -75,8 +75,8 @@ export default function AProposPage() {
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed font-medium text-indigo">
             Avec une note moyenne de {STATS.rating}★ sur {STATS.reviews} commentaires et{" "}
-            {STATS.apartments} logements gérés, Maya Suites est la conciergerie Airbnb la mieux
-            notée de Casablanca.
+            {STATS.apartments} logements gérés, Maya Suites fait partie des conciergeries Airbnb les
+            mieux notées de Casablanca.
           </p>
         </Reveal>
       </section>
