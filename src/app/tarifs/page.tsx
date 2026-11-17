@@ -81,7 +81,7 @@ const TARIFS_FAQ: FaqItem[] = [
   },
   {
     question: `Pourquoi êtes-vous plus chers que d'autres conciergeries${N}?`,
-    answer: `Parce que notre commission paie un prix par nuit ajusté en permanence, un inventaire après chaque ménage et un contrôle technique tous les 15${N}jours. Karim, à Gauthier, garde environ 600${N}MAD de plus par mois qu'avant, après notre commission, et il ne s'occupe plus de rien.`,
+    answer: `Parce que notre commission paie un prix par nuit ajusté en permanence, un inventaire après chaque ménage et un contrôle technique tous les 15${N}jours. Karim, à Gauthier, garde environ 2${N}000${N}MAD de plus par mois qu'avant, après notre commission, ménage et pressing compris, et il ne s'occupe plus de rien.`,
   },
   {
     question: `Comment obtenir mon tarif${N}?`,

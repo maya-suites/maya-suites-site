@@ -51,7 +51,8 @@ export function PriceBand() {
             <h3 className={colTitle}>Le résultat</h3>
             <p>
               Karim gérait seul son appartement à Gauthier. Après notre commission, il garde
-              environ 600&nbsp;MAD de plus par mois qu&apos;avant, et il ne s&apos;en occupe plus.
+              environ 2&nbsp;000&nbsp;MAD de plus par mois qu&apos;avant, ménage et pressing compris, et il ne
+              s&apos;en occupe plus.
             </p>
             <p>
               <strong className="text-white">Sans engagement :</strong> vous partez quand vous
