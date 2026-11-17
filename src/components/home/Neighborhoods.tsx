@@ -1,44 +1,24 @@
-import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
-import { StarDiamond } from "@/components/MayaEmblem";
 import { NEIGHBORHOODS } from "@/lib/site";
 
 export function Neighborhoods() {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="Casablanca, notre terrain de jeu"
-          title={
-            <>
-              Les quartiers de Casablanca que nous connaissons{" "}
-              <em className="italic text-gold">par cœur</em>
-            </>
-          }
-          description="Notre conciergerie Airbnb gère des appartements dans les quartiers les plus demandés de Casablanca. Nous savons ce que cherchent les voyageurs, rue par rue — et ce que peut rapporter votre bien, immeuble par immeuble."
-        />
-
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {NEIGHBORHOODS.map((n, i) => (
-            <Reveal key={n.slug} delay={i * 80}>
-              <div className="group flex h-full flex-col rounded-3xl border border-indigo/10 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg hover:shadow-gold/10">
-                <div className="flex items-center gap-3">
-                  <StarDiamond className="h-3 w-3 text-gold" />
-                  <h3 className="font-display text-2xl font-semibold text-indigo">{n.name}</h3>
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-stone">{n.desc}</p>
-              </div>
-            </Reveal>
+    <section className="ms-band">
+      <div className="ms-wrap">
+        <p className="ms-label">Sélection</p>
+        <h2 className="ms-h2">Les quartiers de Casablanca où nous gérons des appartements</h2>
+        <p className="ms-text">
+          On ne prend pas tous les appartements, et on vous le dit franchement. Un bien mal situé
+          ou mal décoré trouve difficilement ses voyageurs, et personne n&apos;y gagne. Si le vôtre
+          n&apos;est pas encore prêt, on vous aide à le préparer.
+        </p>
+        <div className="mt-[18px] grid gap-x-10 sm:grid-cols-2">
+          {NEIGHBORHOODS.map((n) => (
+            <div key={n.slug} className="border-t border-line py-3.5">
+              <h3 className="font-display text-lg font-bold text-indigo">{n.name}</h3>
+              <p className="text-[14.5px] text-muted">{n.desc}</p>
+            </div>
           ))}
         </div>
-
-        <Reveal className="mt-10">
-          <p className="text-sm text-stone">
-            Votre bien est ailleurs à Casablanca ?{" "}
-            <span className="font-medium text-indigo">Parlons-en quand même</span> — nous étudions
-            chaque appartement au cas par cas.
-          </p>
-        </Reveal>
       </div>
     </section>
   );

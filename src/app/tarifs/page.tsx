@@ -1,91 +1,120 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
-import { Reveal } from "@/components/Reveal";
-import { Simulator } from "@/components/Simulator";
-import { Faq, faqJsonLd, type FaqItem } from "@/components/Faq";
-import { SectionHeading } from "@/components/SectionHeading";
-import { CtaWhatsApp } from "@/components/Buttons";
-import { Lattice } from "@/components/Lattice";
-import { FinalCta } from "@/components/home/FinalCta";
+import { WhatsAppIcon } from "@/components/Buttons";
+import type { FaqItem } from "@/components/Faq";
+import { FaqGrid } from "@/components/FaqGrid";
+import { ContactBand } from "@/components/home/ContactBand";
+import { SimulatorSection } from "@/components/home/SimulatorSection";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { PROOF_LINE, whatsappLink, WHATSAPP_PRICE_MESSAGE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Tarifs de notre conciergerie Airbnb à Casablanca — Devis sur mesure",
   description:
-    "Tarifs conciergerie Airbnb Casablanca : une rémunération liée à vos résultats, zéro frais fixe, zéro abonnement, tout inclus. Contactez-nous pour votre tarif personnalisé.",
+    "Tarifs de notre conciergerie Airbnb à Casablanca : une commission sur vos revenus et des frais d'installation, sans engagement. Demandez votre tarif.",
   alternates: { canonical: "/tarifs" },
 };
 
-const included: { title: string; desc: string }[] = [
-  {
-    title: "Annonces & distribution",
-    desc: "Création, optimisation et diffusion sur Airbnb, Booking.com et en direct. Shooting photo professionnel inclus.",
-  },
-  {
-    title: "Tarification dynamique",
-    desc: "Prix ajustés chaque jour selon la saison, les événements et la demande, pour maximiser chaque nuitée.",
-  },
-  {
-    title: "Communication voyageurs 24/7",
-    desc: "Avant, pendant et après chaque séjour. En français, anglais et arabe.",
-  },
-  {
-    title: "Check-in & check-out",
-    desc: "Accueil physique ou autonome, remise des clés, état des lieux à chaque rotation.",
-  },
-  {
-    title: "Ménage & linge hôtelier",
-    desc: "Ménage professionnel entre chaque séjour, linge fourni et entretenu. Facturé aux voyageurs, pas à vous.",
-  },
-  {
-    title: "Maintenance & urgences",
-    desc: "Réseau d'artisans de confiance, interventions rapides, suivi préventif de votre bien.",
-  },
-  {
-    title: "Gestion des avis",
-    desc: "Réponses soignées et suivi de votre note pour garder votre annonce au sommet.",
-  },
-  {
-    title: "Reporting mensuel",
-    desc: "Revenus, taux d'occupation, interventions : un point complet et transparent chaque mois.",
-  },
+const N = " ";
+
+const recapYouPay = [
+  { item: "Commission", value: "sur les revenus" },
+  { item: "Installation", value: "une fois, au départ" },
+  { item: "Usure normale", value: "à votre charge" },
+];
+
+const recapGuestsPay = [
+  { item: "Ménage", value: "✓" },
+  { item: "Dégâts causés", value: "✓" },
+];
+
+const setup = [
+  { title: "Grand ménage", desc: "De fond en comble, avant la première mise en location." },
+  { title: "Inventaire", desc: "La liste de tout ce qui équipe l'appartement, qui sert de référence à chaque ménage." },
+  { title: "Contrôle technique", desc: "Ce qui fonctionne, et ce qu'il faut réparer avant d'accueillir." },
+  { title: "Literie hôtelière", desc: "Le linge de lit que les voyageurs retrouvent à chaque séjour." },
+  { title: `500${N}MAD de consommables`, desc: "Le premier stock de papier toilette, café et produits d'accueil." },
+  { title: "Un placard fermé à clé", desc: "Pour garder vos affaires personnelles dans l'appartement." },
+  { title: "Shooting photo professionnel", desc: "Des photos prises par un professionnel, retouchées pour Airbnb." },
+  { title: "Annonce Airbnb", desc: "Rédigée, optimisée et mise en ligne par nos soins." },
+];
+
+const ongoing = [
+  { title: "Le prix de chaque nuit", desc: "Ajusté en permanence selon la demande." },
+  { title: "Les voyageurs", desc: "Messages, arrivées, départs, remise des clés." },
+  { title: "Le ménage et le linge", desc: "Organisés entre deux séjours, payés par les voyageurs." },
+  { title: "L'inventaire", desc: "À la fin de chaque ménage, sur tablette." },
+  { title: "Le contrôle technique", desc: `Tous les 15${N}jours.` },
+  { title: "La maintenance", desc: "Prestataires trouvés, interventions organisées et suivies." },
+  { title: "Les consommables", desc: "Réassortis en continu." },
+  { title: "L'espace propriétaire", desc: "Revenus, interventions et factures, mois par mois." },
+  { title: "Le versement", desc: "Chaque mois, au Maroc ou sur un compte à l'étranger." },
 ];
 
 const TARIFS_FAQ: FaqItem[] = [
   {
-    question: "Quel est le prix de la conciergerie Maya Suites à Casablanca ?",
+    question: `Quel est le prix de votre conciergerie Airbnb à Casablanca${N}?`,
     answer:
-      "Notre tarif est personnalisé selon votre bien et vos objectifs. Contactez-nous sur WhatsApp : nous vous répondons en moins d'une heure avec une proposition claire. Les frais de ménage sont facturés aux voyageurs lors de leur réservation. Il n'y a aucun abonnement, aucun frais d'entrée et aucun coût fixe pour le propriétaire.",
+      "Une commission sur les revenus locatifs de votre appartement, et des frais d'installation payés une fois, au démarrage. Le montant dépend de votre appartement. Écrivez-nous sur WhatsApp avec le quartier, le nombre de chambres et quelques photos, et on vous donne votre tarif.",
   },
   {
-    question: "Y a-t-il des frais cachés ou des coûts de démarrage ?",
-    answer:
-      "Non. Le shooting photo, la création des annonces et la mise en ligne sont inclus. Les seuls investissements éventuels concernent l'équipement de votre appartement (linge, équipements manquants) — toujours validés avec vous avant.",
+    question: `À quoi servent les frais d'installation${N}?`,
+    answer: `À tout ce qui est fait avant le premier voyageur${N}: grand ménage, inventaire, contrôle technique, literie hôtelière, 500${N}MAD de consommables, placard fermé à clé, shooting photo professionnel, et création de l'annonce Airbnb. Ils ne sont payés qu'une fois.`,
   },
   {
-    question: "Pourquoi une rémunération liée à mes revenus plutôt qu'un forfait fixe ?",
-    answer:
-      "Parce que c'est le seul modèle qui aligne nos intérêts : nous ne gagnons que si vous gagnez. Chaque nuitée optimisée, chaque avis cinq étoiles et chaque voyageur fidélisé augmente vos revenus — et les nôtres.",
+    question: `Qui paie le ménage${N}?`,
+    answer: "Les voyageurs. Les frais de ménage ne sont pas à votre charge.",
   },
   {
-    question: "Le tarif est-il adapté si je confie plusieurs biens ?",
+    question: `Qui paie les réparations${N}?`,
     answer:
-      "Si vous nous confiez plusieurs appartements, parlons-en. Nous étudions des conditions adaptées aux portefeuilles de biens.",
+      "Un dégât causé par un voyageur est à sa charge. L'usure normale (une ampoule, un joint, un appareil qui fatigue) reste à la charge du propriétaire. Dans les deux cas, on trouve le prestataire et on suit l'intervention.",
   },
   {
-    question: "Comment obtenir mon tarif ?",
+    question: `Y a-t-il un engagement de durée${N}?`,
+    answer: "Non. Vous pouvez arrêter quand vous voulez.",
+  },
+  {
+    question: `Quand suis-je payé${N}?`,
     answer:
-      "Envoyez-nous un message WhatsApp avec le quartier, le nombre de chambres et le standing de votre bien. Nous revenons vers vous en moins d'une heure avec une proposition personnalisée, tout inclus : shooting, tarification dynamique, communication 24/7 et reporting mensuel.",
+      "Chaque mois, au Maroc ou sur un compte à l'étranger. Le détail du mois (chiffre d'affaires, commission, revenu net) est dans votre espace propriétaire.",
+  },
+  {
+    question: `Pourquoi êtes-vous plus chers que d'autres conciergeries${N}?`,
+    answer: `Parce que notre commission paie un prix par nuit ajusté en permanence, un inventaire après chaque ménage et un contrôle technique tous les 15${N}jours. Karim, à Gauthier, gagne un peu plus qu'avant après notre commission, et il ne s'occupe plus de rien.`,
+  },
+  {
+    question: `Comment obtenir mon tarif${N}?`,
+    answer:
+      "Écrivez-nous sur WhatsApp avec le quartier, le nombre de chambres et quelques photos. Idriss vous répond avec le tarif de votre appartement, et vous dit franchement s'il est prêt à être loué.",
   },
 ];
+
+function ItemGrid({ items, cols }: { items: { title: string; desc: string }[]; cols: string }) {
+  return (
+    <div className={`mt-2 grid gap-x-6 ${cols}`}>
+      {items.map((it) => (
+        <div key={it.title} className="border-t border-ink pt-3 pb-5">
+          <h3 className="mb-1 font-display text-[17px] font-bold text-indigo">{it.title}</h3>
+          <p className="text-[14.5px] text-muted">{it.desc}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function RecapRow({ item, value }: { item: string; value: string }) {
+  return (
+    <div className="flex items-baseline gap-2">
+      <span>{item}</span>
+      <span className="flex-1 -translate-y-1 border-b border-dotted border-[#a7a196]" aria-hidden="true" />
+      <span className="whitespace-nowrap text-indigo">{value}</span>
+    </div>
+  );
+}
 
 export default function TarifsPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(TARIFS_FAQ)) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -97,111 +126,151 @@ export default function TarifsPage() {
           ),
         }}
       />
-      <PageHero
-        eyebrow="Tarifs"
-        title={
-          <>
-            Un tarif <em className="italic text-gold">sur mesure</em>, tout inclus
-          </>
-        }
-        description="Pas d'abonnement, pas de frais cachés : si votre appartement ne rapporte pas, nous ne gagnons rien. Contactez-nous pour connaître le tarif adapté à votre bien."
-      />
 
-      {/* Demande de tarif */}
-      <section className="relative overflow-hidden bg-gold py-16">
-        <Lattice color="#1b1560" opacity={0.05} />
-        <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-5 text-center sm:px-8 lg:flex-row lg:justify-between lg:text-left">
-          <Reveal>
-            <p className="font-display text-5xl font-bold text-indigo sm:text-7xl">
-              Votre tarif, <em className="italic">sur mesure</em>
+      {/* En-tête */}
+      <section className="pt-[calc(4rem+clamp(44px,7vw,88px))] pb-[clamp(44px,7vw,88px)]">
+        <div className="ms-wrap grid items-center gap-[clamp(32px,6vw,72px)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+          <div>
+            <h1 className="mb-[18px] font-mono text-[13px] leading-[1.3] font-medium tracking-[0.08em] text-indigo uppercase">
+              Tarifs de notre conciergerie Airbnb à Casablanca
+            </h1>
+            <p className="ms-display">Ce que vous payez, et ce que ça vous rapporte.</p>
+            <p className="ms-lead">
+              Une commission sur vos revenus et des frais d&apos;installation. Sans engagement.
             </p>
-            <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-indigo/70">
-              selon votre bien et vos objectifs
+            <p className="max-w-[62ch] text-muted">
+              Le ménage est payé par les voyageurs. Le montant exact dépend de votre appartement&nbsp;:
+              on vous le donne sur WhatsApp.
             </p>
-          </Reveal>
-          <Reveal delay={150} className="max-w-md">
-            <p className="text-indigo/90">
-              Frais de ménage facturés aux voyageurs, aucun coût fixe pour vous.{" "}
-              <strong>Écrivez-nous : réponse en moins d&apos;une heure.</strong>
-            </p>
-            <div className="mt-5 flex justify-center lg:justify-start">
-              <CtaWhatsApp
-                label="Demander mon tarif"
-                message="Bonjour Maya Suites ! Je souhaite connaître vos tarifs pour mon appartement."
-              />
+            <div className="mt-[26px] flex flex-wrap items-center gap-x-[22px] gap-y-3.5">
+              <a
+                href={whatsappLink(WHATSAPP_PRICE_MESSAGE)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ms-btn ms-btn-wa"
+              >
+                <WhatsAppIcon className="h-[18px] w-[18px]" />
+                Demander mon tarif
+              </a>
+              <a href="#simulateur" className="ms-textlink">
+                Estimer mes revenus ↓
+              </a>
             </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Tout inclus */}
-      <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-        <SectionHeading
-          eyebrow="Ce qui est inclus"
-          title={
-            <>
-              Tout est <em className="italic text-gold">vraiment</em> inclus
-            </>
-          }
-        />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {included.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 4) * 90}>
-              <div className="h-full rounded-3xl border border-indigo/10 bg-white p-7">
-                <span
-                  aria-hidden="true"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-indigo"
-                >
-                  ✓
-                </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-indigo">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone">{item.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Simulateur */}
-      <section id="simulateur" className="bg-white py-24 scroll-mt-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            align="center"
-            eyebrow="Simulateur"
-            title={
-              <>
-                Et vous, combien pourriez-vous <em className="italic text-gold">gagner</em> ?
-              </>
-            }
-          />
-          <Reveal delay={150} className="mx-auto mt-12 max-w-4xl">
-            <Simulator />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* FAQ tarifs */}
-      <section className="bg-cream py-24">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8">
-          <SectionHeading
-            align="center"
-            eyebrow="Questions sur nos tarifs"
-            title={
-              <>
-                Parlons <em className="italic text-gold">argent</em>, franchement
-              </>
-            }
-          />
-          <div className="mt-12">
-            <Faq items={TARIFS_FAQ} />
+            <p className="ms-proof">{PROOF_LINE}</p>
           </div>
-          <Reveal className="mt-12 text-center">
-            <CtaWhatsApp label="Poser une question sur WhatsApp" />
-          </Reveal>
+
+          <div className="border border-ink bg-paper px-[18px] py-4 font-mono text-[13px] leading-[1.7]">
+            <div className="mb-2.5 flex justify-between gap-3 border-b border-dashed border-[#8d887d] pb-2.5">
+              <span className="font-medium">RÉCAPITULATIF</span>
+              <span>Maya Suites</span>
+            </div>
+            <p className="text-muted">Vous payez</p>
+            {recapYouPay.map((r) => (
+              <RecapRow key={r.item} {...r} />
+            ))}
+            <p className="mt-3 text-muted">Les voyageurs paient</p>
+            {recapGuestsPay.map((r) => (
+              <RecapRow key={r.item} {...r} />
+            ))}
+            <div className="mt-2.5 border-t border-dashed border-[#8d887d] pt-2.5 text-xs text-muted">
+              Engagement&nbsp;: aucun · versement chaque mois
+            </div>
+          </div>
         </div>
       </section>
 
-      <FinalCta />
+      {/* Frais d'installation */}
+      <section className="ms-band bg-sheet">
+        <div className="ms-wrap">
+          <p className="ms-label">Frais d&apos;installation</p>
+          <h2 className="ms-h2">Avant votre premier voyageur&nbsp;: ce que couvrent les frais d&apos;installation</h2>
+          <p className="ms-text">Payés une seule fois, au démarrage.</p>
+          <ItemGrid items={setup} cols="sm:grid-cols-2 lg:grid-cols-4" />
+        </div>
+      </section>
+
+      {/* Commission */}
+      <section className="ms-band">
+        <div className="ms-wrap">
+          <p className="ms-label">Commission</p>
+          <h2 className="ms-h2">Chaque mois&nbsp;: ce que couvre notre commission</h2>
+          <p className="ms-text">
+            Elle est calculée sur les revenus locatifs de votre appartement. Si l&apos;appartement
+            loue moins, vous payez moins.
+          </p>
+          <ItemGrid items={ongoing} cols="sm:grid-cols-2 lg:grid-cols-3" />
+        </div>
+      </section>
+
+      {/* Pourquoi ce prix */}
+      <section className="ms-band ms-on-ink border-indigo bg-indigo text-indigo-ink">
+        <div className="ms-wrap grid items-start gap-[clamp(28px,5vw,64px)] md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+          <div className="ms-text">
+            <p className="ms-label">Pourquoi ce prix</p>
+            <h2 className="ms-h2">Pourquoi notre commission est au-dessus du marché</h2>
+            <p>
+              Notre commission est un peu au-dessus de ce qui se pratique à Casablanca, et nous
+              facturons l&apos;installation. Ce supplément paie un prix par nuit travaillé en
+              permanence et un appartement contrôlé après chaque séjour.
+            </p>
+            <p>
+              <strong className="text-white">Sans engagement&nbsp;:</strong> vous partez quand vous
+              voulez.
+            </p>
+            <p>
+              Si le prix est votre seul critère, nous ne sommes sans doute pas faits pour
+              travailler ensemble.
+            </p>
+            <div className="mt-[26px]">
+              <a
+                href={whatsappLink(WHATSAPP_PRICE_MESSAGE)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ms-btn ms-btn-gold"
+              >
+                Demander notre tarif
+              </a>
+            </div>
+          </div>
+
+          <div className="border border-white/35 p-5">
+            <p className="mb-3 font-mono text-xs font-medium tracking-[0.06em] text-gold uppercase">
+              Cas réel · duplex une chambre à Gauthier
+            </p>
+            <dl className="divide-y divide-white/20 text-[15px] tabular-nums">
+              <div className="flex justify-between gap-4 py-2.5">
+                <dt>Chiffre d&apos;affaires mensuel, géré seul</dt>
+                <dd className="whitespace-nowrap">13&nbsp;500 MAD</dd>
+              </div>
+              <div className="flex justify-between gap-4 py-2.5">
+                <dt>Chiffre d&apos;affaires mensuel, avec Maya Suites</dt>
+                <dd className="font-bold whitespace-nowrap text-gold">16&nbsp;000 MAD</dd>
+              </div>
+              <div className="flex justify-between gap-4 py-2.5">
+                <dt>Ce qu&apos;il gagne, après notre commission</dt>
+                <dd className="text-right font-bold text-white">un peu plus qu&apos;avant</dd>
+              </div>
+              <div className="flex justify-between gap-4 py-2.5">
+                <dt>Le temps qu&apos;il y passe</dt>
+                <dd className="font-bold text-white">aucun</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <SimulatorSection sheet title={<>Estimez vos revenus avant de demander notre tarif</>} />
+
+      {/* FAQ */}
+      <section className="ms-band">
+        <div className="ms-wrap">
+          <p className="ms-label">Questions</p>
+          <h2 className="ms-h2">Tarifs de conciergerie Airbnb à Casablanca&nbsp;: vos questions</h2>
+          <FaqGrid items={TARIFS_FAQ} />
+        </div>
+      </section>
+
+      <ContactBand />
     </>
   );
 }

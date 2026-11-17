@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,17 +8,20 @@ import { Analytics } from "@/components/Analytics";
 import { SITE } from "@/lib/site";
 import { guestReviews, ownerTestimonials } from "@/lib/reviews";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Maya Suites",
   },
   description:
-    "Conciergerie Airbnb à Casablanca : gestion complète de votre location courte durée. 40+ appartements, 4,83★ sur 1 598 avis, 85 % d'occupation moyenne. Estimez vos revenus.",
+    "Conciergerie Airbnb à Casablanca : gestion complète de votre location courte durée, de l'annonce à la maintenance. 4,83★ sur 1 758 commentaires Airbnb, 43 logements.",
   keywords: [
     "conciergerie airbnb casablanca",
     "gestion airbnb casablanca",
@@ -77,7 +80,7 @@ const jsonLd = {
     "@type": "AggregateRating",
     ratingValue: "4.83",
     bestRating: "5",
-    reviewCount: "1598",
+    reviewCount: "1758",
   },
   review: [
     ...guestReviews.slice(0, 4).map((r) => ({
@@ -99,8 +102,8 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${poppins.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">
+    <html lang="fr" className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}>
+      <body className="ms-site flex min-h-full flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

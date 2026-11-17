@@ -1,6 +1,6 @@
 // Modèle d'estimation de revenus — hypothèses internes Maya Suites.
 // ADR (tarif moyen/nuit) estimé par quartier, standing du bien et atouts (vue/terrasse).
-// Occupation moyenne 85 %. À affiner avec les données réelles des 40 appartements.
+// Occupation retenue : 85 %.
 
 export const ESTIMATOR_NEIGHBORHOODS = [
   { id: "gauthier", label: "Gauthier", baseAdr: 420 },
@@ -16,18 +16,21 @@ export const STANDING_OPTIONS = [
   {
     id: "moyen",
     label: "Moyen standing",
+    short: "Moyen",
     hint: "Confortable et fonctionnel : mobilier simple, pas de décoration particulière, équipements de base.",
     multiplier: 0.78,
   },
   {
     id: "haut",
     label: "Haut standing",
+    short: "Haut",
     hint: "Décoration soignée, matériaux de qualité, cuisine équipée récente, literie hôtelière.",
     multiplier: 1,
   },
   {
     id: "luxe",
     label: "Luxe",
+    short: "Luxe",
     hint: "Style hôtelier : architecte/décorateur, finitions haut de gamme, équipements premium.",
     multiplier: 1.32,
   },
@@ -38,7 +41,7 @@ export type Standing = (typeof STANDING_OPTIONS)[number]["id"];
 export type EstimateInput = {
   neighborhoodId: (typeof ESTIMATOR_NEIGHBORHOODS)[number]["id"];
   standing: Standing;
-  bedrooms: number; // 0 = studio
+  bedrooms: number;
   hasView: boolean; // vue dégagée ou terrasse aménagée
 };
 
@@ -48,7 +51,7 @@ export type Estimate = {
   adr: number;
 };
 
-const OCCUPANCY = 0.85;
+export const OCCUPANCY = 0.85;
 const NIGHTS_PER_MONTH = 30.4;
 const VIEW_BONUS = 0.12;
 
@@ -74,7 +77,7 @@ export function estimateRevenue(input: EstimateInput): Estimate {
 }
 
 export function formatMAD(value: number) {
-  return new Intl.NumberFormat("fr-MA", { maximumFractionDigits: 0 })
+  return new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 })
     .format(value)
-    .replace(/\u202f/g, " ");
+    .replace(/[\u202f\u00a0]/g, "\u00a0");
 }

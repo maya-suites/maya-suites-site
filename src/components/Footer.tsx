@@ -1,41 +1,36 @@
 import Link from "next/link";
 import { MayaEmblem } from "@/components/MayaEmblem";
-import { Lattice } from "@/components/Lattice";
 import { NAV_LINKS, NEIGHBORHOODS, SITE, whatsappLink, WHATSAPP_DEFAULT_MESSAGE } from "@/lib/site";
+
+const linkCls = "hover:text-indigo hover:underline decoration-gold decoration-2 underline-offset-4";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-indigo text-cream">
-      <Lattice color="#dfa600" opacity={0.06} />
-      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <footer className="border-t border-ink bg-paper font-mono text-[13px] leading-[1.8] text-muted">
+      <div className="ms-wrap py-12">
+        <div className="grid gap-9 md:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <MayaEmblem className="h-12 w-12" variant="reversed" />
-              <span className="text-xl font-bold tracking-tight">
-                Maya
-                <br />
-                Suites
+            <Link href="/" className="flex items-center gap-2.5" aria-label="Maya Suites, accueil">
+              <MayaEmblem className="h-9 w-9" />
+              <span className="font-display text-[15px] leading-none font-extrabold tracking-[0.08em] text-indigo">
+                MAYA SUITES
               </span>
-            </div>
-            <p className="mt-5 max-w-xs font-display text-xl leading-snug text-gold-light italic">
-              {SITE.tagline}
-            </p>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/70">
-              <Link href="/" className="underline decoration-gold/60 underline-offset-4 hover:text-gold-light">
+            </Link>
+            <p className="mt-4 max-w-xs">
+              <Link href="/" className="font-medium text-ink underline decoration-gold decoration-2 underline-offset-4 hover:text-indigo">
                 Conciergerie Airbnb à Casablanca
               </Link>
-              . Nous gérons votre appartement comme s&apos;il était le
-              nôtre — et vos voyageurs comme s&apos;ils étaient chez eux.
+              . On gère votre location courte durée de l&apos;annonce à la maintenance, et vous suivez
+              tout depuis votre espace propriétaire.
             </p>
           </div>
 
-          <nav aria-label="Pied de page — pages">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Explorer</p>
-            <ul className="mt-4 space-y-2.5">
+          <nav aria-label="Pied de page, pages">
+            <p className="font-medium text-ink">Pages</p>
+            <ul className="mt-2">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-cream/80 transition-colors hover:text-gold-light">
+                  <Link href={l.href} className={linkCls}>
                     {l.label}
                   </Link>
                 </li>
@@ -44,31 +39,24 @@ export function Footer() {
           </nav>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Nos quartiers</p>
-            <ul className="mt-4 space-y-2.5">
+            <p className="font-medium text-ink">Quartiers</p>
+            <ul className="mt-2">
               {NEIGHBORHOODS.map((n) => (
-                <li key={n.slug} className="text-sm text-cream/80">
-                  {n.name}
-                </li>
+                <li key={n.slug}>{n.name}</li>
               ))}
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Contact</p>
-            <ul className="mt-4 space-y-3 text-sm text-cream/80">
+            <p className="font-medium text-ink">Contact</p>
+            <ul className="mt-2">
               <li>
-                <a
-                  href={whatsappLink(WHATSAPP_DEFAULT_MESSAGE)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-gold-light"
-                >
-                  WhatsApp — réponse en moins d&apos;une heure
+                <a href={whatsappLink(WHATSAPP_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer" className={linkCls}>
+                  WhatsApp +212 769 01 98 85
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-gold-light">
+                <a href={`mailto:${SITE.email}`} className={linkCls}>
                   {SITE.email}
                 </a>
               </li>
@@ -76,30 +64,17 @@ export function Footer() {
                 {SITE.streetAddress}, {SITE.postalCode} Casablanca, Maroc
               </li>
               <li>
-                <a
-                  href={SITE.googleProfile}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-gold-light"
-                >
-                  Notre fiche Google
+                <a href={SITE.googleProfile} target="_blank" rel="noopener noreferrer" className={linkCls}>
+                  Notre fiche Google ↗
                 </a>
               </li>
             </ul>
-            <p className="mt-6 text-xs leading-relaxed text-cream/50">
-              Conciergerie Airbnb Casablanca · Gestion locative courte durée · Gauthier, Racine,
-              Maârif, Aïn Diab, Marina, Bourgogne, CFC
-            </p>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-cream/15 pt-7 text-xs text-cream/50 sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} Maya Suites — Tous droits réservés
-          </p>
-          <p>
-            Conciergerie établie à Casablanca depuis {SITE.foundedYear}
-          </p>
+        <div className="mt-10 flex flex-col justify-between gap-2 border-t border-line pt-6 text-xs sm:flex-row">
+          <p>© {new Date().getFullYear()} Maya Suites. Tous droits réservés.</p>
+          <p>Conciergerie établie à Casablanca depuis {SITE.foundedYear}</p>
         </div>
       </div>
     </footer>

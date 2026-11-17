@@ -1,45 +1,39 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/home/Hero";
-import { StatsBar } from "@/components/home/StatsBar";
-import { Team } from "@/components/home/Team";
-import { Testimonials } from "@/components/home/Testimonials";
-import { GuestReviews } from "@/components/home/GuestReviews";
-import { PainSolution } from "@/components/home/PainSolution";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { OwnerPortal } from "@/components/home/OwnerPortal";
+import { HomeHero } from "@/components/home/HomeHero";
+import { KarimCase } from "@/components/home/KarimCase";
+import { NoMoreTasks } from "@/components/home/NoMoreTasks";
+import { OwnerSpace } from "@/components/home/OwnerSpace";
 import { SimulatorSection } from "@/components/home/SimulatorSection";
-import { Gallery } from "@/components/home/Gallery";
-import { Process } from "@/components/home/Process";
-import { PricingTeaser } from "@/components/home/PricingTeaser";
+import { PriceBand } from "@/components/home/PriceBand";
 import { Neighborhoods } from "@/components/home/Neighborhoods";
+import { Apartments } from "@/components/home/Apartments";
+import { Founder } from "@/components/home/Founder";
+import { OwnerReviews } from "@/components/home/OwnerReviews";
 import { HomeFaq } from "@/components/home/HomeFaq";
-import { FinalCta } from "@/components/home/FinalCta";
+import { ContactBand } from "@/components/home/ContactBand";
 
 export const metadata: Metadata = {
   title: "Maya Suites : Conciergerie Airbnb à Casablanca",
   description:
-    "Conciergerie Airbnb de confiance à Casablanca : 4,83★, 40+ biens gérés, 0 frais si vous ne gagnez pas. Estimez vos revenus gratuitement.",
+    "Conciergerie Airbnb à Casablanca : on gère votre location de A à Z, vous suivez tout en ligne. 4,83★ sur 1 758 commentaires, sans engagement.",
   alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <StatsBar />
-      <Team />
-      <Testimonials />
-      <GuestReviews />
-      <PainSolution />
-      <ServicesSection />
-      <OwnerPortal />
+      <HomeHero />
+      <KarimCase />
+      <NoMoreTasks />
+      <OwnerSpace />
       <SimulatorSection />
-      <Gallery />
-      <Process />
-      <PricingTeaser />
+      <PriceBand />
       <Neighborhoods />
+      <Apartments />
+      <Founder />
+      <OwnerReviews />
       <HomeFaq />
-      <FinalCta />
+      <ContactBand />
     </>
   );
 }

@@ -13,7 +13,7 @@ export function MayaEmblem({ className = "h-10 w-10", variant = "primary" }: Pro
       <svg viewBox="0 0 96 96" className={className} aria-hidden="true">
         <rect x="25" y="25" width="46" height="46" transform="rotate(45 48 48)" fill="none" stroke="#dfa600" strokeWidth="2.5" />
         <rect x="28.5" y="28.5" width="39" height="39" transform="rotate(45 48 48)" fill="#dfa600" />
-        <text x="48" y="50" textAnchor="middle" dominantBaseline="central" fill="#1b1560" fontFamily="var(--font-cormorant), Georgia, serif" fontSize="34" fontWeight="700">
+        <text x="48" y="50" textAnchor="middle" dominantBaseline="central" fill="#1b1560" fontFamily="Georgia, serif" fontSize="34" fontWeight="700">
           M
         </text>
       </svg>
@@ -34,7 +34,7 @@ export function MayaEmblem({ className = "h-10 w-10", variant = "primary" }: Pro
       <rect x="27" y="27" width="42" height="42" transform="rotate(45 48 48)" fill="none" stroke="#1b1560" strokeWidth="2.5" />
       <rect x="27" y="27" width="42" height="42" fill="#dfa600" />
       <rect x="30.5" y="30.5" width="35" height="35" fill="none" stroke="#1b1560" strokeWidth="1.2" opacity="0.35" />
-      <text x="48" y="49" textAnchor="middle" dominantBaseline="central" fill="#1b1560" fontFamily="var(--font-cormorant), Georgia, serif" fontSize="32" fontWeight="700">
+      <text x="48" y="49" textAnchor="middle" dominantBaseline="central" fill="#1b1560" fontFamily="Georgia, serif" fontSize="32" fontWeight="700">
         M
       </text>
     </svg>

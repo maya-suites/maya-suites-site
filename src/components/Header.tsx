@@ -2,32 +2,27 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { MayaEmblem } from "@/components/MayaEmblem";
-import { NAV_LINKS, whatsappLink, WHATSAPP_DEFAULT_MESSAGE } from "@/lib/site";
+import { NAV_LINKS, whatsappLink, WHATSAPP_ESTIMATE_MESSAGE } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/Buttons";
 
 export function Header() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [openedOn, setOpenedOn] = useState(pathname);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
-  useEffect(() => setMounted(true), []);
-
-  const overHero = pathname === "/" && !scrolled && !open;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
+  // Ferme le menu quand on change de page.
+  if (open && openedOn !== pathname) {
     setOpen(false);
-  }, [pathname]);
+    setOpenedOn(pathname);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -43,82 +38,78 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
-        overHero ? "bg-transparent py-5" : "bg-cream/90 py-3 shadow-sm shadow-indigo/5 backdrop-blur-md"
-      }`}
-    >
-      <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Maya Suites — Accueil">
-          <MayaEmblem className="h-10 w-10" variant={overHero ? "reversed" : "primary"} />
-          <span
-            className={`text-lg leading-none font-bold tracking-tight ${overHero ? "text-cream" : "text-indigo"}`}
-          >
-            Maya
-            <br />
-            Suites
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-ink bg-paper">
+      <div className="ms-wrap relative z-10 flex h-16 items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Maya Suites, accueil">
+          <MayaEmblem className="h-[38px] w-[38px]" />
+          <span className="font-display text-[15px] leading-none font-extrabold tracking-[0.08em] text-indigo">
+            MAYA SUITES
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`text-sm font-medium transition-colors ${
-                pathname.startsWith(l.href)
-                  ? "text-gold"
-                  : overHero
-                    ? "text-cream/90 hover:text-gold-light"
-                    : "text-ink/80 hover:text-indigo"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+        <div className="flex items-center gap-3 lg:gap-6">
+          {/* Navigation ordinateur */}
+          <nav className="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
+            {NAV_LINKS.map((l) => {
+              const active = pathname.startsWith(l.href);
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`font-mono text-[13px] font-medium underline-offset-4 decoration-gold decoration-2 hover:text-indigo hover:underline ${
+                    active ? "text-indigo underline" : "text-ink"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
+          </nav>
+
           <a
-            href={whatsappLink(WHATSAPP_DEFAULT_MESSAGE)}
+            href={whatsappLink(WHATSAPP_ESTIMATE_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-indigo shadow-md shadow-gold/25 transition-all duration-300 hover:scale-[1.04] hover:bg-gold-light"
+            className="ms-btn ms-btn-indigo px-3.5 py-2.5 text-[13px]"
           >
-            <WhatsAppIcon className="h-4 w-4" />
-            Confier mon appartement
+            Faire estimer
           </a>
-        </nav>
 
-        {/* Mobile burger */}
-        <button
-          type="button"
-          onClick={() => setOpen(!open)}
-          aria-expanded={open}
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
-        >
-          <span className={`h-0.5 w-6 rounded transition-all duration-300 ${overHero ? "bg-cream" : "bg-indigo"} ${open ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`h-0.5 w-6 rounded transition-all duration-300 ${overHero ? "bg-cream" : "bg-indigo"} ${open ? "opacity-0" : ""}`} />
-          <span className={`h-0.5 w-6 rounded transition-all duration-300 ${overHero ? "bg-cream" : "bg-indigo"} ${open ? "-translate-y-2 -rotate-45" : ""}`} />
-        </button>
+          {/* Menu mobile */}
+          <button
+            type="button"
+            onClick={() => {
+              setOpenedOn(pathname);
+              setOpen(!open);
+            }}
+            aria-expanded={open}
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
+          >
+            <span className={`h-0.5 w-6 bg-indigo transition-transform duration-300 ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`h-0.5 w-6 bg-indigo transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
+            <span className={`h-0.5 w-6 bg-indigo transition-transform duration-300 ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
       {mounted &&
         createPortal(
           <div
-            className={`fixed inset-0 z-30 bg-cream transition-opacity duration-300 lg:hidden ${
+            className={`fixed inset-0 z-30 bg-paper transition-opacity duration-200 lg:hidden ${
               open ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
             <nav
-              className="flex h-full flex-col justify-center gap-1 overflow-y-auto px-6 pt-16 pb-10"
+              className="ms-wrap flex h-full flex-col justify-center overflow-y-auto pt-20 pb-10"
               aria-label="Navigation mobile"
             >
               {NAV_LINKS.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  className={`border-b border-indigo/10 py-3.5 font-display text-2xl font-semibold ${
+                  className={`border-b border-line py-4 font-display text-2xl font-extrabold tracking-tight ${
                     pathname.startsWith(l.href) ? "text-gold" : "text-indigo"
                   }`}
                 >
@@ -126,13 +117,13 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href={whatsappLink(WHATSAPP_DEFAULT_MESSAGE)}
+                href={whatsappLink(WHATSAPP_ESTIMATE_MESSAGE)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-indigo"
+                className="ms-btn ms-btn-wa mt-8"
               >
-                <WhatsAppIcon className="h-4 w-4" />
-                Confier mon appartement
+                <WhatsAppIcon className="h-[18px] w-[18px]" />
+                Faire estimer mon appartement
               </a>
             </nav>
           </div>,

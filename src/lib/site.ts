@@ -12,23 +12,25 @@ export const SITE = {
 } as const;
 
 export const STATS = {
-  apartments: "40+",
+  apartments: "43",
   rating: "4,83",
-  reviews: "1 598",
+  reviews: "1 758",
   travelers: "9 000+",
   occupancy: "85%",
 } as const;
+
+export const PROOF_LINE = `${STATS.rating} ★ · ${STATS.reviews} commentaires · Superhost · ${STATS.apartments} logements · Sans engagement`;
 
 export const NEIGHBORHOODS = [
   {
     slug: "gauthier",
     name: "Gauthier",
-    desc: "Le cœur vibrant de Casablanca — cafés, bureaux et adresses les plus recherchées de la location courte durée.",
+    desc: "Le cœur vibrant de Casablanca : cafés, bureaux, et les adresses les plus recherchées en location courte durée.",
   },
   {
     slug: "racine",
     name: "Racine",
-    desc: "Élégant et résidentiel, à deux pas du boulevard d'Anfa. Très forte demande voyageurs d'affaires.",
+    desc: "Élégant et résidentiel, à deux pas du boulevard d'Anfa. Très demandé par les voyageurs d'affaires.",
   },
   {
     slug: "maarif",
@@ -38,12 +40,12 @@ export const NEIGHBORHOODS = [
   {
     slug: "ain-diab",
     name: "Aïn Diab",
-    desc: "La corniche, l'océan, les rooftops. La destination loisir par excellence.",
+    desc: "La corniche, l'océan, les rooftops. La destination loisir de la ville.",
   },
   {
     slug: "marina",
     name: "Marina",
-    desc: "Vue mer, tours modernes, proximité de la Mosquée Hassan II. Prisé des séjours premium.",
+    desc: "Vue mer, tours modernes, à côté de la Mosquée Hassan II. Prisé des séjours premium.",
   },
   {
     slug: "bourgogne",
@@ -53,7 +55,7 @@ export const NEIGHBORHOODS = [
   {
     slug: "cfc",
     name: "CFC",
-    desc: "Le quartier d'affaires nouvelle génération — tours modernes et clientèle business haut de gamme.",
+    desc: "Le quartier d'affaires nouvelle génération : tours modernes et clientèle business.",
   },
 ] as const;
 
@@ -70,6 +72,14 @@ export function whatsappLink(message?: string) {
   const base = `https://wa.me/${SITE.whatsappNumber}`;
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
+
+export const WHATSAPP_ESTIMATE_MESSAGE =
+  "Bonjour Maya Suites, j'ai un appartement à Casablanca et j'aimerais le faire estimer.";
+
+export const WHATSAPP_PRICE_MESSAGE =
+  "Bonjour Maya Suites, j'aimerais connaître votre tarif pour mon appartement à Casablanca.";
+
+export const AIRBNB_PROFILE = "https://www.airbnb.fr/p/mayasuites";
 
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Bonjour Maya Suites, je suis propriétaire d'un bien à Casablanca et j'aimerais en savoir plus sur votre conciergerie.";
