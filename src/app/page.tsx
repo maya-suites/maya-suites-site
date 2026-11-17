@@ -16,7 +16,7 @@ import { HomeFaq } from "@/components/home/HomeFaq";
 import { FinalCta } from "@/components/home/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Maya Suites - Votre conciergerie Airbnb de confiance à Casablanca",
+  title: "Maya Suites : Conciergerie Airbnb à Casablanca",
   description:
     "Conciergerie Airbnb de confiance à Casablanca : 4,83★, 40+ biens gérés, 0 frais si vous ne gagnez pas. Estimez vos revenus gratuitement.",
   alternates: { canonical: "/" },
