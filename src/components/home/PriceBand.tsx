@@ -50,8 +50,8 @@ export function PriceBand() {
           <div className={`${col} space-y-3.5 text-[15px]`}>
             <h3 className={colTitle}>Le résultat</h3>
             <p>
-              Karim gérait seul son appartement à Gauthier. Après notre commission, il gagne un
-              peu plus qu&apos;avant, et il ne s&apos;en occupe plus.
+              Karim gérait seul son appartement à Gauthier. Après notre commission, il garde
+              environ 600&nbsp;MAD de plus par mois qu&apos;avant, et il ne s&apos;en occupe plus.
             </p>
             <p>
               <strong className="text-white">Sans engagement :</strong> vous partez quand vous

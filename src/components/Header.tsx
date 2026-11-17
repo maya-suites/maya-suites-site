@@ -39,15 +39,15 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-ink bg-paper">
-      <div className="ms-wrap relative z-10 flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5" aria-label="Maya Suites, accueil">
-          <MayaEmblem className="h-[38px] w-[38px]" />
-          <span className="font-display text-[15px] leading-none font-extrabold tracking-[0.08em] text-indigo">
+      <div className="ms-wrap relative z-10 flex h-16 items-center justify-between gap-2 sm:gap-4">
+        <Link href="/" className="flex shrink-0 items-center gap-2 sm:gap-2.5" aria-label="Maya Suites, accueil">
+          <MayaEmblem className="h-8 w-8 sm:h-[38px] sm:w-[38px]" />
+          <span className="font-display text-[14px] leading-none font-extrabold tracking-[0.06em] whitespace-nowrap text-indigo sm:text-[15px] sm:tracking-[0.08em]">
             MAYA SUITES
           </span>
         </Link>
 
-        <div className="flex items-center gap-3 lg:gap-6">
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-6">
           {/* Navigation ordinateur */}
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
             {NAV_LINKS.map((l) => {
@@ -71,7 +71,7 @@ export function Header() {
             href={whatsappLink(WHATSAPP_ESTIMATE_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="ms-btn ms-btn-indigo px-3.5 py-2.5 text-[13px]"
+            className="ms-btn ms-btn-indigo px-3 py-2.5 text-[12px] whitespace-nowrap sm:px-3.5 sm:text-[13px]"
           >
             Faire estimer
           </a>

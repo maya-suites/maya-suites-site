@@ -6,7 +6,7 @@ const N = " ";
 export const HOME_FAQ: FaqItem[] = [
   {
     question: `Combien rapporte un appartement en Airbnb à Casablanca${N}?`,
-    answer: `Cela dépend surtout du quartier, du standing, du nombre de chambres et de la décoration. Un exemple réel${N}: le duplex une chambre de Karim, à Gauthier, fait en moyenne 16${N}000 MAD de chiffre d'affaires par mois avec nous, contre 13${N}500 MAD quand il le gérait seul. Le simulateur plus haut vous donne une première fourchette. Pour un chiffre précis, envoyez-nous le quartier et quelques photos sur WhatsApp.`,
+    answer: `Cela dépend surtout du quartier, du standing, du nombre de chambres et de la décoration. Un exemple réel${N}: le duplex une chambre de Karim, à Gauthier, fait en moyenne 17${N}340 MAD de chiffre d'affaires par mois avec nous, contre 12${N}996 MAD quand il le gérait seul. Après notre commission, il lui reste environ 600${N}MAD de plus par mois qu'avant. Le simulateur plus haut vous donne une première fourchette. Pour un chiffre précis, envoyez-nous le quartier et quelques photos sur WhatsApp.`,
   },
   {
     question: `Combien coûte votre conciergerie${N}?`,

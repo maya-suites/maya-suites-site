@@ -16,7 +16,7 @@ Un avis cinq étoiles résulte presque toujours de l'alignement de plusieurs fac
 
 - **La conformité aux photos** : ne jamais survendre un logement. Les attentes créées par l'annonce doivent être tenues à la lettre.
 - **La propreté** : le critère le plus impitoyable, détaillé dans notre [guide des standards de ménage](/blog/menage-linge-standards-hoteliers-airbnb).
-- **La réactivité** : répondre en quelques minutes, à toute heure, rassure et évite qu'un petit problème ne dégénère en frustration.
+- **La réactivité** : répondre en quelques minutes rassure et évite qu'un petit problème ne dégénère en frustration.
 - **Les petites attentions** : un mot de bienvenue, une recommandation de restaurant local, un consommable offert — ces détails sont disproportionnellement cités dans les avis positifs.
 
 <!--cta-->
@@ -31,7 +31,7 @@ Répondre publiquement à chaque avis — y compris les avis positifs — montre
 
 ## Le résultat sur la durée
 
-Cette discipline, appliquée sur l'ensemble de notre parc, nous permet de maintenir une note moyenne de **4,83★ sur 1 598 avis** — un chiffre qui se construit avis après avis, jamais par accident. Pour voir des exemples concrets d'avis vérifiés par nos voyageurs, consultez la [page d'accueil](/).
+Cette discipline, appliquée sur l'ensemble de notre parc, nous permet de maintenir une note moyenne de **4,83★ sur 1 758 commentaires** — un chiffre qui se construit avis après avis, jamais par accident. Pour lire les avis de nos voyageurs, consultez [notre profil Airbnb](https://www.airbnb.fr/p/mayasuites).
 
 ## Vous voulez ce niveau de gestion pour votre bien ?
 

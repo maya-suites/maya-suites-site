@@ -6,7 +6,7 @@ category: "Rentabilité"
 cover: 9
 ---
 
-Vous possédez un appartement à Casablanca — ou vous envisagez d'en acheter un — et vous vous demandez ce qu'il pourrait rapporter en location courte durée ? Voici les chiffres, les méthodes de calcul et les pièges à éviter, tirés de notre expérience de conciergerie sur plus de 40 appartements dans la ville.
+Vous possédez un appartement à Casablanca — ou vous envisagez d'en acheter un — et vous vous demandez ce qu'il pourrait rapporter en location courte durée ? Voici les chiffres, les méthodes de calcul et les pièges à éviter, tirés de notre expérience de conciergerie sur 43 logements dans la ville.
 
 ## Courte durée vs longue durée : l'écart est réel
 
@@ -26,7 +26,7 @@ La différence se joue sur trois leviers :
 
 ### 2. Le taux d'occupation
 
-C'est le chiffre qui sépare les annonces amateurs des annonces professionnelles. Une annonce gérée occasionnellement plafonne souvent autour de 40 à 55 % d'occupation. Sur notre parc, la moyenne dépasse **85 %** — grâce à la tarification dynamique, à la qualité des photos, à la réactivité aux messages et aux avis cinq étoiles qui font remonter l'annonce dans les résultats de recherche.
+C'est le chiffre qui sépare les annonces amateurs des annonces professionnelles. Une annonce gérée occasionnellement plafonne souvent autour de 40 à 55 % d'occupation. Sur notre parc, la moyenne dépasse **80 %** — grâce à la tarification dynamique, à la qualité des photos, à la réactivité aux messages et aux avis cinq étoiles qui font remonter l'annonce dans les résultats de recherche.
 
 ### 3. Les charges réelles
 
@@ -73,8 +73,8 @@ Envie du détail quartier par quartier ? Notre [guide des meilleurs quartiers po
 1. **Soignez la première impression** : les photos professionnelles augmentent directement le taux de clic et le tarif acceptable.
 2. **Adoptez la tarification dynamique** : un prix fixe toute l'année laisse de l'argent sur la table, dans les deux sens.
 3. **Visez les avis cinq étoiles** : la note de votre annonce est votre meilleur commercial. Propreté irréprochable et réactivité sont non négociables.
-4. **Déléguez si vous ne pouvez pas être disponible 24/7** : la location courte durée est un métier d'hôtellerie, pas un investissement passif — sauf si une conciergerie le rend passif pour vous.
+4. **Déléguez si vous ne pouvez pas être disponible au quotidien** : la location courte durée est un métier d'hôtellerie, pas un investissement passif — sauf si une conciergerie le rend passif pour vous.
 
 ## Estimez le potentiel de votre appartement
 
-Chaque bien est unique : l'étage, la lumière, la décoration et même la rue changent l'équation. Pour une estimation fondée sur les données réelles de nos 40 appartements à Casablanca, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou contactez-nous directement — l'estimation est gratuite et sans engagement.
+Chaque bien est unique : l'étage, la lumière, la décoration et même la rue changent l'équation. Pour une estimation fondée sur les données réelles de nos 43 logements à Casablanca, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou contactez-nous directement — l'estimation est gratuite et sans engagement.

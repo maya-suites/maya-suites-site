@@ -6,7 +6,7 @@ category: "Conciergerie"
 cover: 9
 ---
 
-C'est la question que se posent la plupart des propriétaires avant de déléguer leur appartement : quelle [conciergerie Airbnb à Casablanca](/) choisir ? Plutôt que des promesses marketing, voici une comparaison basée sur des critères mesurables — taux d'occupation, note moyenne, transparence — et les chiffres réels de notre parc de plus de 40 appartements.
+C'est la question que se posent la plupart des propriétaires avant de déléguer leur appartement : quelle [conciergerie Airbnb à Casablanca](/) choisir ? Plutôt que des promesses marketing, voici une comparaison basée sur des critères mesurables — taux d'occupation, note moyenne, transparence — et les chiffres réels de notre parc de 43 logements.
 
 ## Les trois options pour louer en courte durée à Casablanca
 
@@ -24,13 +24,13 @@ Comme détaillé dans notre [guide pour choisir sa conciergerie Airbnb](/blog/ch
 
 | Indicateur | Maya Suites | Moyenne d'une gestion occasionnelle |
 |---|---|---|
-| Taux d'occupation moyen | **85 %** | 40 à 55 % |
-| Note moyenne | **4,83★** sur 1 598 avis | Variable, souvent en dessous de 4,5★ |
-| Appartements gérés à Casablanca | **40+** | — |
+| Taux d'occupation moyen | **plus de 80 %** | 40 à 55 % |
+| Note moyenne | **4,83★** sur 1 758 commentaires | Variable, souvent en dessous de 4,5★ |
+| Appartements gérés à Casablanca | **43** | — |
 | Voyageurs accueillis | **9 000+** | — |
-| Tarif | Sur devis, sans abonnement ni frais fixe | Variable selon les prestataires |
+| Tarif | Sur devis, sans abonnement | Variable selon les prestataires |
 
-Ces chiffres sont publics et vérifiables : les avis cinq étoiles affichés sur notre page d'accueil sont des captures d'écran authentiques de nos annonces Airbnb, pas des témoignages rédigés en interne.
+Ces chiffres sont vérifiables : nos 1 758 commentaires sont consultables sur [notre profil Airbnb](https://www.airbnb.fr/p/mayasuites), et les avis de nos propriétaires sur notre fiche Google.
 
 ## Pourquoi ces chiffres se traduisent en revenus
 
@@ -41,7 +41,7 @@ Un taux d'occupation supérieur de 30 points de pourcentage à la moyenne du mar
 - Un parc concentré sur **Casablanca uniquement** — Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC — avec une connaissance fine des tarifs et de la demande de chaque quartier ([guide des quartiers](/blog/meilleurs-quartiers-airbnb-casablanca)).
 - Une tarification ajustée en continu, jamais un tarif fixe laissé à l'abandon.
 - Un standard de ménage et de linge hôtelier appliqué systématiquement, détaillé dans notre [guide qualité](/blog/menage-linge-standards-hoteliers-airbnb).
-- Un espace propriétaire transparent, avec revenus et statistiques accessibles à tout moment.
+- Un espace propriétaire transparent, avec revenus, interventions de maintenance et factures accessibles à tout moment.
 - Une équipe locale, basée à Casablanca, joignable directement — pas un centre d'appels externalisé.
 
 ## Vérifiez par vous-même

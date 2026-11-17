@@ -10,7 +10,7 @@ L'arrivée est le premier contact réel entre le voyageur et votre appartement �
 
 ## Pourquoi l'autonomie plutôt que la remise de clés en main propre
 
-Un check-in en personne impose de synchroniser les horaires du voyageur avec ceux d'un membre de l'équipe — ce qui devient vite ingérable à l'échelle de plusieurs appartements, et frustrant pour un voyageur qui arrive tard ou plus tôt que prévu. Un accès autonome, disponible 24/7, supprime cette contrainte des deux côtés.
+Un check-in en personne impose de synchroniser les horaires du voyageur avec ceux d'un membre de l'équipe — ce qui devient vite ingérable à l'échelle de plusieurs appartements, et frustrant pour un voyageur qui arrive tard ou plus tôt que prévu. Un accès autonome supprime cette contrainte des deux côtés.
 
 ## Les solutions qui fonctionnent bien à Casablanca
 
@@ -30,4 +30,4 @@ Un accès autonome ne dispense pas d'être disponible : un voyageur bloqué deva
 
 ## Une expérience gérée du début à la fin
 
-Chez Maya Suites, chaque appartement dispose d'un protocole d'arrivée standardisé et d'une astreinte réactive, un des facteurs qui contribue à notre note moyenne de **4,83★ sur 1 598 avis**. Pour savoir comment nous pourrions améliorer l'expérience de vos voyageurs et vos revenus, [contactez notre équipe](/contact) ou testez notre [simulateur de revenus](/tarifs#simulateur).
+Chez Maya Suites, chaque appartement dispose d'un protocole d'arrivée standardisé et d'une équipe réactive, un des facteurs qui contribue à notre note moyenne de **4,83★ sur 1 758 commentaires**. Pour savoir comment nous pourrions améliorer l'expérience de vos voyageurs et vos revenus, [contactez notre équipe](/contact) ou testez notre [simulateur de revenus](/tarifs#simulateur).

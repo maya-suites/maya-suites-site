@@ -28,8 +28,8 @@ Les commissions et les attentes des voyageurs diffèrent selon la plateforme. Un
 
 ## Notre approche chez Maya Suites
 
-Nous diffusons les appartements de notre parc sur les canaux les plus pertinents selon leur profil, avec une synchronisation de calendrier en temps réel pour éliminer tout risque de double réservation. C'est l'un des leviers qui contribue à notre taux d'occupation moyen de **85 %** sur plus de 40 appartements à Casablanca.
+Aujourd'hui, nous travaillons uniquement sur Airbnb : les 43 logements de notre parc à Casablanca y sont diffusés, avec un taux d'occupation moyen de **plus de 80 %**.
 
 ## Discutons de votre stratégie de diffusion
 
-La bonne combinaison de plateformes dépend du quartier, du type de bien et de la clientèle visée. Pour une recommandation adaptée à votre appartement, [contactez notre équipe](/contact) ou estimez d'abord vos revenus potentiels avec notre [simulateur](/tarifs#simulateur).
+La bonne combinaison de plateformes dépend du quartier, du type de bien et de la clientèle visée. Pour parler de votre appartement, [contactez notre équipe](/contact) ou estimez d'abord vos revenus potentiels avec notre [simulateur](/tarifs#simulateur).

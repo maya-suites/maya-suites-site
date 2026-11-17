@@ -139,7 +139,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
             Une question sur votre bien à Casablanca ?
           </p>
           <p className="mx-auto mt-2 max-w-md text-sm text-stone">
-            Estimation gratuite de vos revenus, réponse en moins d&apos;une heure.
+            Estimation gratuite de vos revenus. C&apos;est Idriss, le fondateur, qui vous répond.
           </p>
           <div className="mt-6">
             <CtaWhatsApp label="Échanger sur WhatsApp" />

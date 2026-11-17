@@ -16,7 +16,7 @@ export const STATS = {
   rating: "4,83",
   reviews: "1 758",
   travelers: "9 000+",
-  occupancy: "85%",
+  occupancy: "plus de 80 %",
 } as const;
 
 export const PROOF_LINE = `${STATS.rating} ★ · ${STATS.reviews} commentaires · Superhost · ${STATS.apartments} logements · Sans engagement`;

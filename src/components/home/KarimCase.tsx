@@ -1,10 +1,4 @@
-const rows: { label: string; before: string; after: string; up?: boolean }[] = [
-  { label: "Chiffre d'affaires mensuel moyen", before: "13 500 MAD", after: "16 000 MAD", up: true },
-  { label: "Taux d'occupation", before: "—", after: "identique" },
-  { label: "Prix moyen par nuit", before: "—", after: "nettement plus haut", up: true },
-  { label: "Ce qu'il gagne, après notre commission", before: "—", after: "un peu plus qu'avant", up: true },
-  { label: "Le temps qu'il y passe", before: "messages, ménage, prix, clés", after: "aucun", up: true },
-];
+import { KARIM_ROWS } from "@/lib/karim";
 
 export function KarimCase() {
   return (
@@ -14,8 +8,8 @@ export function KarimCase() {
           <p className="ms-label">Cas réel · Gauthier</p>
           <h2 className="ms-h2">Karim gérait son Airbnb seul. Aujourd&apos;hui, il ne s&apos;en occupe plus.</h2>
           <p>
-            Duplex une chambre à Gauthier. Autant de nuits louées qu&apos;avant, mais chaque nuit
-            vendue plus cher grâce à un prix ajusté en permanence.
+            Duplex une chambre à Gauthier. Un peu moins de nuits louées qu&apos;avant, mais chaque
+            nuit vendue 38&nbsp;% plus cher grâce à un prix ajusté en permanence.
           </p>
           <figure className="mt-[26px] border-l-[3px] border-gold pl-4">
             <blockquote className="font-display text-[clamp(1.1rem,2vw,1.35rem)] leading-[1.4] font-semibold text-indigo">
@@ -42,7 +36,7 @@ export function KarimCase() {
               </tr>
             </thead>
             <tbody>
-              {rows.map((r) => (
+              {KARIM_ROWS.map((r) => (
                 <tr key={r.label} className="border-b border-line align-top text-sm sm:text-[15px]">
                   <th scope="row" className="w-[42%] py-[13px] pr-2.5 text-left font-semibold">
                     {r.label}

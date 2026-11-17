@@ -12,7 +12,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 export const metadata: Metadata = {
   title: "Gestion Airbnb à Casablanca — Nos services de conciergerie",
   description:
-    "Gestion Airbnb complète à Casablanca : annonces et tarification dynamique, accueil voyageurs 24/7, ménage et linge hôtelier, maintenance. Découvrez les services de la conciergerie Maya Suites.",
+    "Gestion Airbnb complète à Casablanca : annonce Airbnb et prix ajustés en permanence, accueil des voyageurs, ménage et linge hôtelier, maintenance. Découvrez les services de la conciergerie Maya Suites.",
   alternates: { canonical: "/services" },
 };
 

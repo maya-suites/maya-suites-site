@@ -6,7 +6,7 @@ category: "Investissement"
 cover: 10
 ---
 
-Tous les quartiers de Casablanca ne se valent pas en location courte durée — et le « meilleur » quartier dépend surtout de votre objectif : tarif maximal à la nuit, occupation régulière toute l'année, ou potentiel de plus-value. Voici notre lecture du terrain, quartier par quartier, construite en gérant plus de 40 appartements dans la ville.
+Tous les quartiers de Casablanca ne se valent pas en location courte durée — et le « meilleur » quartier dépend surtout de votre objectif : tarif maximal à la nuit, occupation régulière toute l'année, ou potentiel de plus-value. Voici notre lecture du terrain, quartier par quartier, construite en gérant 43 logements dans la ville.
 
 ## Gauthier : la valeur sûre
 

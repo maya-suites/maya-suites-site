@@ -31,4 +31,4 @@ Avant tout achat destiné à la location courte durée, il est essentiel de vér
 
 ## Un accompagnement de l'achat à l'exploitation
 
-Chez Maya Suites, nous accompagnons aussi des investisseurs en amont de leur achat, pour évaluer le potentiel locatif réel d'un bien avant signature — sur la base de données issues de plus de 40 appartements déjà gérés à Casablanca. Pour un avis sur un bien que vous envisagez d'acquérir, ou pour estimer le potentiel d'un appartement que vous possédez déjà, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou [contactez notre équipe](/contact).
+Chez Maya Suites, nous accompagnons aussi des investisseurs en amont de leur achat, pour évaluer le potentiel locatif réel d'un bien avant signature — sur la base de données issues de 43 logements déjà gérés à Casablanca. Pour un avis sur un bien que vous envisagez d'acquérir, ou pour estimer le potentiel d'un appartement que vous possédez déjà, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou [contactez notre équipe](/contact).

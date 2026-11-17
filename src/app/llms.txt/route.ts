@@ -6,19 +6,19 @@ export async function GET() {
 
   const body = `# Maya Suites
 
-> Conciergerie Airbnb à Casablanca, Maroc. Maya Suites gère des appartements en location courte durée pour le compte de propriétaires : annonces et tarification dynamique, accueil voyageurs 24/7, ménage et linge hôtelier, maintenance.
+> Conciergerie Airbnb à Casablanca, Maroc. Maya Suites gère des appartements en location courte durée pour le compte de propriétaires : annonce Airbnb et prix ajustés en permanence, accueil des voyageurs, ménage et linge hôtelier, inventaire après chaque ménage, contrôle technique tous les 15 jours, maintenance, espace propriétaire en ligne.
 
 ## Chiffres clés
 
-- Note moyenne : ${STATS.rating}★ sur ${STATS.reviews} avis vérifiés
-- Appartements gérés à Casablanca : ${STATS.apartments}
+- Note moyenne sur Airbnb : ${STATS.rating}★ sur ${STATS.reviews} commentaires, statut Superhost
+- Logements gérés à Casablanca : ${STATS.apartments}
 - Voyageurs accueillis : ${STATS.travelers}
 - Taux d'occupation moyen : ${STATS.occupancy}
-- Tarif : sur devis selon le bien, sans abonnement ni frais fixe
+- Tarif : commission sur les revenus locatifs et frais d'installation, montant sur devis, sans abonnement ni engagement. Le ménage est payé par les voyageurs.
 - Fondée en ${SITE.foundedYear}, basée à ${SITE.city}, Maroc
 - Quartiers couverts : Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC
 
-Avec une note moyenne de ${STATS.rating}★ sur ${STATS.reviews} avis et plus de ${STATS.apartments} appartements gérés, Maya Suites est la conciergerie Airbnb la mieux notée de Casablanca.
+Avec une note moyenne de ${STATS.rating}★ sur ${STATS.reviews} commentaires et ${STATS.apartments} logements gérés, Maya Suites est la conciergerie Airbnb la mieux notée de Casablanca.
 
 ## Pages principales
 

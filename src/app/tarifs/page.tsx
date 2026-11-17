@@ -5,6 +5,7 @@ import { FaqGrid } from "@/components/FaqGrid";
 import { ContactBand } from "@/components/home/ContactBand";
 import { SimulatorSection } from "@/components/home/SimulatorSection";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { KARIM_ROWS } from "@/lib/karim";
 import { PROOF_LINE, whatsappLink, WHATSAPP_PRICE_MESSAGE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -80,7 +81,7 @@ const TARIFS_FAQ: FaqItem[] = [
   },
   {
     question: `Pourquoi êtes-vous plus chers que d'autres conciergeries${N}?`,
-    answer: `Parce que notre commission paie un prix par nuit ajusté en permanence, un inventaire après chaque ménage et un contrôle technique tous les 15${N}jours. Karim, à Gauthier, gagne un peu plus qu'avant après notre commission, et il ne s'occupe plus de rien.`,
+    answer: `Parce que notre commission paie un prix par nuit ajusté en permanence, un inventaire après chaque ménage et un contrôle technique tous les 15${N}jours. Karim, à Gauthier, garde environ 600${N}MAD de plus par mois qu'avant, après notre commission, et il ne s'occupe plus de rien.`,
   },
   {
     question: `Comment obtenir mon tarif${N}?`,
@@ -237,24 +238,31 @@ export default function TarifsPage() {
             <p className="mb-3 font-mono text-xs font-medium tracking-[0.06em] text-gold uppercase">
               Cas réel · duplex une chambre à Gauthier
             </p>
-            <dl className="divide-y divide-white/20 text-[15px] tabular-nums">
-              <div className="flex justify-between gap-4 py-2.5">
-                <dt>Chiffre d&apos;affaires mensuel, géré seul</dt>
-                <dd className="whitespace-nowrap">13&nbsp;500 MAD</dd>
-              </div>
-              <div className="flex justify-between gap-4 py-2.5">
-                <dt>Chiffre d&apos;affaires mensuel, avec Maya Suites</dt>
-                <dd className="font-bold whitespace-nowrap text-gold">16&nbsp;000 MAD</dd>
-              </div>
-              <div className="flex justify-between gap-4 py-2.5">
-                <dt>Ce qu&apos;il gagne, après notre commission</dt>
-                <dd className="text-right font-bold text-white">un peu plus qu&apos;avant</dd>
-              </div>
-              <div className="flex justify-between gap-4 py-2.5">
-                <dt>Le temps qu&apos;il y passe</dt>
-                <dd className="font-bold text-white">aucun</dd>
-              </div>
-            </dl>
+            <table className="w-full border-collapse text-[15px] tabular-nums">
+              <caption className="sr-only">
+                Résultats de l&apos;appartement de Karim, géré seul puis avec Maya Suites
+              </caption>
+              <thead>
+                <tr className="text-left font-mono text-[11px] tracking-[0.06em] text-indigo-ink/70 uppercase">
+                  <th scope="col" className="pb-2">
+                    <span className="sr-only">Indicateur</span>
+                  </th>
+                  <th scope="col" className="pb-2 pl-3 font-medium">Seul</th>
+                  <th scope="col" className="pb-2 pl-3 font-medium">Avec nous</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/20 border-t border-white/20">
+                {KARIM_ROWS.map((r) => (
+                  <tr key={r.label} className="align-top">
+                    <th scope="row" className="py-2.5 text-left font-normal">
+                      {r.label}
+                    </th>
+                    <td className="py-2.5 pl-3">{r.before}</td>
+                    <td className={`py-2.5 pl-3 ${r.up ? "font-bold text-gold" : ""}`}>{r.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

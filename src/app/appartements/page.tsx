@@ -9,9 +9,9 @@ import { FinalCta } from "@/components/home/FinalCta";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Nos appartements en gestion à Casablanca — 40+ adresses d'exception",
+  title: "Nos appartements en gestion à Casablanca — 43 adresses d'exception",
   description:
-    "Découvrez les appartements gérés par Maya Suites à Casablanca : Gauthier, Racine, Maârif, Aïn Diab, Marina. 40+ biens notés 4,83★ par plus de 9 000 voyageurs.",
+    "Découvrez les appartements gérés par Maya Suites à Casablanca : Gauthier, Racine, Maârif, Aïn Diab, Marina, Bourgogne, CFC. 43 logements notés 4,83★ sur 1 758 commentaires Airbnb.",
   alternates: { canonical: "/appartements" },
 };
 

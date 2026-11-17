@@ -33,4 +33,4 @@ Une décoration soignée permet généralement de positionner le tarif à la nui
 
 ## Besoin d'un avis sur votre décoration actuelle ?
 
-Notre équipe évalue régulièrement le potentiel de décoration des appartements qui rejoignent notre parc de plus de 40 biens à Casablanca. Pour un avis sur votre intérieur et une estimation de revenus, utilisez notre [simulateur](/tarifs#simulateur) ou [contactez-nous directement](/contact).
+Notre équipe évalue régulièrement le potentiel de décoration des appartements qui rejoignent notre parc de 43 logements à Casablanca. Pour un avis sur votre intérieur et une estimation de revenus, utilisez notre [simulateur](/tarifs#simulateur) ou [contactez-nous directement](/contact).

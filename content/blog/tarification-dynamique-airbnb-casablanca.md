@@ -33,7 +33,7 @@ La tarification dynamique ne consiste pas à changer les prix au hasard, mais à
 
 ## L'impact réel sur les revenus
 
-Sur notre parc de plus de 40 appartements à Casablanca, la combinaison tarification dynamique + gestion réactive porte le taux d'occupation moyen à **85 %**, bien au-dessus de la moyenne observée sur les annonces gérées de façon occasionnelle (40 à 55 %). Notre [guide de la rentabilité Airbnb à Casablanca](/blog/rentabilite-airbnb-casablanca) détaille le calcul complet, charges comprises.
+Sur notre parc de 43 logements à Casablanca, la combinaison tarification dynamique + gestion réactive porte le taux d'occupation moyen à **plus de 80 %**, bien au-dessus de la moyenne observée sur les annonces gérées de façon occasionnelle (40 à 55 %). Notre [guide de la rentabilité Airbnb à Casablanca](/blog/rentabilite-airbnb-casablanca) détaille le calcul complet, charges comprises.
 
 ## Estimez l'impact sur votre bien
 

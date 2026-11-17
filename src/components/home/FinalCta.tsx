@@ -17,8 +17,8 @@ export function FinalCta() {
             Et si votre appartement travaillait <em className="italic text-gold">pour vous</em> ?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg">
-            Un message suffit. Nous vous répondons en moins d&apos;une heure, avec une estimation
-            gratuite de vos revenus.
+            Envoyez-nous le quartier et quelques photos&nbsp;: on vous dit ce que votre appartement
+            peut rapporter.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CtaWhatsApp label="Démarrer sur WhatsApp" />

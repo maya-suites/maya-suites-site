@@ -8,7 +8,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 export const metadata: Metadata = {
   title: "Contact — Parlons de votre appartement",
   description:
-    "Contactez Maya Suites, conciergerie Airbnb à Casablanca. Réponse en moins d'une heure sur WhatsApp. Estimation gratuite des revenus de votre bien.",
+    "Contactez Maya Suites, conciergerie Airbnb à Casablanca, sur WhatsApp ou par email. Estimation gratuite des revenus de votre appartement.",
   alternates: { canonical: "/contact" },
 };
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
             Un message, et <em className="italic text-gold">tout commence</em>
           </>
         }
-        description="Le plus simple ? WhatsApp. Nous répondons en moins d'une heure, 7 jours sur 7."
+        description="Le plus simple ? WhatsApp. C'est Idriss, le fondateur, qui vous répond."
       />
 
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">

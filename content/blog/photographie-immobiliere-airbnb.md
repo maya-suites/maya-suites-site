@@ -38,4 +38,4 @@ Une séance photo professionnelle représente un coût ponctuel, largement compe
 
 ## Nos photos, notre standard
 
-Chez Maya Suites, chaque appartement intégrant notre parc bénéficie d'une séance photo professionnelle avant sa mise en ligne — un standard qui contribue directement à notre taux d'occupation moyen de **85 %**. Pour estimer le potentiel de votre bien une fois correctement mis en valeur, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou [échangez avec notre équipe](/contact).
+Chez Maya Suites, chaque appartement intégrant notre parc bénéficie d'une séance photo professionnelle avant sa mise en ligne — un standard qui contribue directement à notre taux d'occupation moyen de **plus de 80 %**. Pour estimer le potentiel de votre bien une fois correctement mis en valeur, utilisez notre [simulateur de revenus](/tarifs#simulateur) ou [échangez avec notre équipe](/contact).

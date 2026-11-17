@@ -34,7 +34,7 @@ La vraie différence entre une gestion amateur et une gestion professionnelle se
 
 ## Le lien direct avec vos revenus
 
-Chaque point de note en moins sur Airbnb réduit la visibilité de l'annonce dans les résultats de recherche — et donc le taux d'occupation. À l'inverse, une propreté irréprochable, alliée à un [check-in fluide](/blog/check-in-autonome-experience-voyageur), est l'un des piliers qui permettent à notre parc d'atteindre une note moyenne de **4,83★ sur 1 598 avis** et un taux d'occupation de **85 %**.
+Chaque point de note en moins sur Airbnb réduit la visibilité de l'annonce dans les résultats de recherche — et donc le taux d'occupation. À l'inverse, une propreté irréprochable, alliée à un [check-in fluide](/blog/check-in-autonome-experience-voyageur), est l'un des piliers qui permettent à notre parc d'atteindre une note moyenne de **4,83★ sur 1 758 commentaires** et un taux d'occupation de **plus de 80 %**.
 
 ## Confiez la logistique, gardez les revenus
 

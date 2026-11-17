@@ -10,7 +10,7 @@ Confier son appartement à une conciergerie, c'est déléguer un actif qui gén�
 
 ## 1. La commission n'est pas le seul chiffre qui compte
 
-Une commission basse qui s'accompagne d'un taux d'occupation médiocre coûte plus cher qu'une commission plus élevée avec une gestion qui remplit le calendrier. Demandez toujours : quel est le taux d'occupation moyen du parc géré ? Sur nos 40+ appartements à Casablanca, la moyenne dépasse **85 %** — c'est ce chiffre qui doit guider votre comparaison, pas seulement le pourcentage prélevé.
+Une commission basse qui s'accompagne d'un taux d'occupation médiocre coûte plus cher qu'une commission plus élevée avec une gestion qui remplit le calendrier. Demandez toujours : quel est le taux d'occupation moyen du parc géré ? Sur nos 43 logements à Casablanca, la moyenne dépasse **80 %** — c'est ce chiffre qui doit guider votre comparaison, pas seulement le pourcentage prélevé.
 
 ## 2. La qualité des photos et de l'annonce
 
@@ -40,4 +40,4 @@ Gauthier, Racine, Maârif, Aïn Diab : chaque quartier de Casablanca a ses propr
 
 ## Le bon réflexe avant de signer
 
-Demandez toujours des chiffres concrets : taux d'occupation moyen, note moyenne des annonces gérées, nombre de biens actuellement en portefeuille. Chez Maya Suites, ces chiffres sont publics : **4,83★ sur 1 598 avis**, **85 % d'occupation moyenne**, plus de **9 000 voyageurs accueillis**. Pour évaluer ce que votre bien pourrait générer, essayez notre [simulateur de revenus](/tarifs#simulateur) ou [contactez-nous](/contact) directement.
+Demandez toujours des chiffres concrets : taux d'occupation moyen, note moyenne des annonces gérées, nombre de biens actuellement en portefeuille. Chez Maya Suites, ces chiffres sont publics : **4,83★ sur 1 758 commentaires**, **plus de 80 % d'occupation moyenne**, plus de **9 000 voyageurs accueillis**. Pour évaluer ce que votre bien pourrait générer, essayez notre [simulateur de revenus](/tarifs#simulateur) ou [contactez-nous](/contact) directement.
